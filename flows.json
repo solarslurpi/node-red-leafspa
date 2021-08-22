@@ -1,0 +1,2958 @@
+[
+    {
+        "id": "8b70799ce97cf17d",
+        "type": "tab",
+        "label": "Setup",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4abea758808e56d0",
+        "type": "tab",
+        "label": "Loop",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c2981ff8c433e9a6",
+        "type": "subflow",
+        "name": "turn off humidifier",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 20,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "a3b09164372d24f0"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "0db68c550f681be0",
+        "type": "subflow",
+        "name": "turn CO2 OFF",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 20,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "71eb9a25fe38c767"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "050af3e6e2b7e30f",
+        "type": "subflow",
+        "name": "Are Lights ON?",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "a843f58ac62eb4cc"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1420,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "db510cdbd82575a7",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 1460,
+                "y": 440,
+                "wires": [
+                    {
+                        "id": "984089e0d69c9833",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "69ebdf846a0d3107",
+        "type": "group",
+        "z": "4abea758808e56d0",
+        "name": "Read and Display Sensor Readings",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "dfcd0478bf2416e5",
+            "2c8490d8f1428d06",
+            "ff1491759ab107b3",
+            "43ba3c09326d2cb8",
+            "c1fc6b92934fb44f",
+            "235f241e08711939",
+            "73e9b65f7062e826",
+            "11e485116eee57f2",
+            "84278bf54d79cd76",
+            "35ae8f14df4e6a62",
+            "7369975ab5993df5",
+            "109fb15ca23f61de",
+            "d66cdba9a473ecf7",
+            "32c200af72af8230"
+        ],
+        "x": 134,
+        "y": 139,
+        "w": 1112,
+        "h": 482
+    },
+    {
+        "id": "483705c97b955141",
+        "type": "group",
+        "z": "4abea758808e56d0",
+        "name": "Write readings to influx",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "00565b03d17b8d46",
+            "c4e84eaa981a2048",
+            "e80c229c2be830e2",
+            "9aab99897b726c4a",
+            "a95f0f256c955bf7"
+        ],
+        "x": 134,
+        "y": 639,
+        "w": 672,
+        "h": 142
+    },
+    {
+        "id": "76681dea68e7073e",
+        "type": "group",
+        "z": "8b70799ce97cf17d",
+        "name": "Map Grow Day to Growing Stage",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffefbf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "bf2206cd44bbdecb",
+            "8822dd6ccf3225b3",
+            "91a3fa3e8f89a982",
+            "7f34c2b988437de1",
+            "5225ce5babb7bee3",
+            "761452fe79ffb890",
+            "3f895add12630d1d",
+            "969c8b674bd2f6c7",
+            "ac55afdedc5438f7",
+            "91b08df24e304a1f"
+        ],
+        "x": 4,
+        "y": 279,
+        "w": 1722,
+        "h": 222
+    },
+    {
+        "id": "17fe1c864a14a05b",
+        "type": "group",
+        "z": "4abea758808e56d0",
+        "name": "Monitor humidity",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffefbf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "0aba542a5f1e1ac2",
+            "b828c17d9eb8e6e1",
+            "a5e336dbed7a209b",
+            "047cb3eb06765bb9",
+            "c1143aee5a651a93",
+            "1bcc84bdefa18056",
+            "20bd47392e128c87",
+            "85c6f2ccd4776e65"
+        ],
+        "x": 134,
+        "y": 1119,
+        "w": 1252,
+        "h": 242
+    },
+    {
+        "id": "3af2676ba4920b7f",
+        "type": "group",
+        "z": "8b70799ce97cf17d",
+        "name": "Set humidity setpoint",
+        "style": {
+            "stroke": "#777777",
+            "fill": "#ffffff",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "0c10701c124d9652",
+            "edb5d202c65055ae",
+            "283564a90c3644bd",
+            "2270e22d655962ab",
+            "63da71d4c7af9093",
+            "31c15103344bd46d",
+            "4ec71986b323618c",
+            "a30d46a3add1ea11",
+            "22ee6de07ad111f0",
+            "94aa72c68daa4225"
+        ],
+        "x": 14,
+        "y": 559,
+        "w": 1312,
+        "h": 202
+    },
+    {
+        "id": "968ef5bdcf2bce96",
+        "type": "group",
+        "z": "4abea758808e56d0",
+        "name": "Monidtor CO2",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffefbf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "4fb004ca8284248d",
+            "cf0e0aef5fbb50e9",
+            "924fbb8788b9fc93",
+            "8a6cf02093cdb7e4",
+            "2c22ddd44c08a475",
+            "60d8efba376dfdd6",
+            "90f7f763ddbe027d",
+            "b71dc2ec5755f8e2",
+            "bb1dfaea5945dde9",
+            "a2039b383c948332",
+            "34407a7145c88bc5",
+            "edb3b81e0594ac2a"
+        ],
+        "x": 134,
+        "y": 819,
+        "w": 1372,
+        "h": 262
+    },
+    {
+        "id": "2ac6b0fbb850f457",
+        "type": "group",
+        "z": "4abea758808e56d0",
+        "name": "LED ON/OFF CAUTION CHECK",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ff8a9fd5c1a89e32",
+            "2bcaf477fc40c569",
+            "ea863298eae9d267",
+            "764be95d892e7e97",
+            "7a03b95f8c98c4bc",
+            "39a9abd67cdabbce",
+            "17bfe4ebdbd4b9dc",
+            "34a2a5440f93b384",
+            "df5ab8a96fd22ba4",
+            "a686efe96fe20a29",
+            "f781225b90b72e9c"
+        ],
+        "x": 154,
+        "y": 1419,
+        "w": 1382,
+        "h": 322
+    },
+    {
+        "id": "1ea5dfa03b11893e",
+        "type": "scd30-config",
+        "busNumber": "1"
+    },
+    {
+        "id": "20355074b213b777",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "35870709b5fb5fcf",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3b29ec6d48e8bbfe",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "521438b26183dc33",
+        "type": "ui_group",
+        "name": "Home",
+        "tab": "35870709b5fb5fcf",
+        "order": 1,
+        "disp": true,
+        "width": 4,
+        "collapse": false
+    },
+    {
+        "id": "f6223715f914cf06",
+        "type": "ui_spacer",
+        "z": "8b70799ce97cf17d",
+        "name": "spacer",
+        "group": "521438b26183dc33",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "bd52ceb7e193caff",
+        "type": "influxdb",
+        "hostname": "192.168.86.27",
+        "port": "8086",
+        "protocol": "http",
+        "database": "leafspa",
+        "name": "leafspa",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "618e2203d8fce6fa",
+        "type": "config",
+        "z": "8b70799ce97cf17d",
+        "name": "start parameters",
+        "properties": [
+            {
+                "p": "seedling_temp_max",
+                "pt": "flow",
+                "to": "72",
+                "tot": "num"
+            },
+            {
+                "p": "seedling_temp_min",
+                "pt": "flow",
+                "to": "68",
+                "tot": "num"
+            },
+            {
+                "p": "veg_temp_max",
+                "pt": "flow",
+                "to": "77",
+                "tot": "num"
+            },
+            {
+                "p": "veg_temp_min",
+                "pt": "flow",
+                "to": "68",
+                "tot": "num"
+            },
+            {
+                "p": "flower_temp_max",
+                "pt": "flow",
+                "to": "82",
+                "tot": "num"
+            },
+            {
+                "p": "flower_temp_min",
+                "pt": "flow",
+                "to": "75",
+                "tot": "num"
+            },
+            {
+                "p": "grow_stage",
+                "pt": "global",
+                "to": "veg",
+                "tot": "str"
+            },
+            {
+                "p": "CO2",
+                "pt": "global",
+                "to": "400",
+                "tot": "num"
+            },
+            {
+                "p": "temperature",
+                "pt": "global",
+                "to": "70",
+                "tot": "num"
+            },
+            {
+                "p": "humidity",
+                "pt": "global",
+                "to": "40",
+                "tot": "num"
+            }
+        ],
+        "active": true,
+        "x": 240,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ac55afdedc5438f7",
+        "type": "ui_text_input",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "I input Grow Day",
+        "label": "Grow Day:",
+        "tooltip": "",
+        "group": "521438b26183dc33",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "969c8b674bd2f6c7"
+            ]
+        ]
+    },
+    {
+        "id": "761452fe79ffb890",
+        "type": "debug",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1600,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3f895add12630d1d",
+        "type": "switch",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "depending on # grow days so far",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "btwn",
+                "v": "1",
+                "vt": "num",
+                "v2": "13",
+                "v2t": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "14",
+                "vt": "num",
+                "v2": "33",
+                "v2t": "num"
+            },
+            {
+                "t": "gt",
+                "v": "33",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 560,
+        "y": 340,
+        "wires": [
+            [
+                "91a3fa3e8f89a982"
+            ],
+            [
+                "7f34c2b988437de1"
+            ],
+            [
+                "5225ce5babb7bee3"
+            ]
+        ]
+    },
+    {
+        "id": "91a3fa3e8f89a982",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "set grow_stage to seedling",
+        "rules": [
+            {
+                "t": "set",
+                "p": "grow_stage",
+                "pt": "global",
+                "to": "seedling",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 870,
+        "y": 320,
+        "wires": [
+            [
+                "8822dd6ccf3225b3"
+            ]
+        ]
+    },
+    {
+        "id": "7f34c2b988437de1",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "set grow stage to veg",
+        "rules": [
+            {
+                "t": "set",
+                "p": "grow_stage",
+                "pt": "global",
+                "to": "veg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 400,
+        "wires": [
+            [
+                "8822dd6ccf3225b3"
+            ]
+        ]
+    },
+    {
+        "id": "5225ce5babb7bee3",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "set grow stage to flower",
+        "rules": [
+            {
+                "t": "set",
+                "p": "grow_stage",
+                "pt": "global",
+                "to": "flower",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 460,
+        "wires": [
+            [
+                "8822dd6ccf3225b3"
+            ]
+        ]
+    },
+    {
+        "id": "8822dd6ccf3225b3",
+        "type": "function",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "set payload to grow_stage",
+        "func": "msg.payload = global.get(\"grow_stage\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 400,
+        "wires": [
+            [
+                "761452fe79ffb890",
+                "bf2206cd44bbdecb"
+            ]
+        ]
+    },
+    {
+        "id": "969c8b674bd2f6c7",
+        "type": "function",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "convert to int",
+        "func": "global.set(\"grow_stage\",parseInt(global.get(\"grow_stage\")))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "3f895add12630d1d"
+            ]
+        ]
+    },
+    {
+        "id": "dfcd0478bf2416e5",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "Readings",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "2c8490d8f1428d06"
+            ]
+        ]
+    },
+    {
+        "id": "2c8490d8f1428d06",
+        "type": "read-measurement",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "scd30Config": "1ea5dfa03b11893e",
+        "name": "scd30",
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "73e9b65f7062e826",
+                "11e485116eee57f2",
+                "84278bf54d79cd76"
+            ]
+        ]
+    },
+    {
+        "id": "ff1491759ab107b3",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "43ba3c09326d2cb8",
+        "type": "ui_chart",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "Temperature",
+        "group": "521438b26183dc33",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 930,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1fc6b92934fb44f",
+        "type": "ui_chart",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "CO2",
+        "group": "521438b26183dc33",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "CO2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 990,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "235f241e08711939",
+        "type": "ui_chart",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "Humidity",
+        "group": "521438b26183dc33",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#8f33e6",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 990,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "91b08df24e304a1f",
+        "type": "comment",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "How I map grow day to grow stage",
+        "info": "When the seed's tap root or clone is placed in soil and the LED is on for the first time, that is day one.\n\nI've divided the growing stages into:\n- seedling\n- vegetative\n- flowering\n\nThe number of days for each was set based on the [FLU-CultivationGuide_Cannabis_WEB_PROOF_01-2020.pdf](https://github.com/solarslurpi/LeafSpaV2/blob/main/docs/FLU-CultivationGuide_Cannabis_WEB_PROOF_01-2020.pdf)\n",
+        "x": 250,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "bf2206cd44bbdecb",
+        "type": "ui_text",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "group": "521438b26183dc33",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Grow stage",
+        "label": "Grow stage:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "73e9b65f7062e826",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "CO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.co2Concentration",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 360,
+        "wires": [
+            [
+                "c1fc6b92934fb44f",
+                "35ae8f14df4e6a62"
+            ]
+        ]
+    },
+    {
+        "id": "11e485116eee57f2",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload.temperature*9/5 + 32 ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 280,
+        "wires": [
+            [
+                "43ba3c09326d2cb8",
+                "109fb15ca23f61de"
+            ]
+        ]
+    },
+    {
+        "id": "84278bf54d79cd76",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.relativeHumidity",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [
+                "235f241e08711939",
+                "d66cdba9a473ecf7"
+            ]
+        ]
+    },
+    {
+        "id": "35ae8f14df4e6a62",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "set global CO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "CO2",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 340,
+        "wires": [
+            [
+                "7369975ab5993df5"
+            ]
+        ]
+    },
+    {
+        "id": "7369975ab5993df5",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "109fb15ca23f61de",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "set global temperature",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temperature",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 180,
+        "wires": [
+            [
+                "ff1491759ab107b3"
+            ]
+        ]
+    },
+    {
+        "id": "d66cdba9a473ecf7",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "set global humidity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "humidity",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 500,
+        "wires": [
+            [
+                "32c200af72af8230"
+            ]
+        ]
+    },
+    {
+        "id": "00565b03d17b8d46",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "g": "483705c97b955141",
+        "name": "write readings",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 740,
+        "wires": [
+            [
+                "c4e84eaa981a2048"
+            ]
+        ]
+    },
+    {
+        "id": "c4e84eaa981a2048",
+        "type": "function",
+        "z": "4abea758808e56d0",
+        "g": "483705c97b955141",
+        "name": "gather readings",
+        "func": "msg.payload = {\n    CO2:global.get (\"CO2\"),\n    temperature:global.get(\"temperature\"),\n    humidity:global.get(\"humidity\")\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 740,
+        "wires": [
+            [
+                "e80c229c2be830e2",
+                "9aab99897b726c4a"
+            ]
+        ]
+    },
+    {
+        "id": "e80c229c2be830e2",
+        "type": "influxdb out",
+        "z": "4abea758808e56d0",
+        "g": "483705c97b955141",
+        "influxdb": "bd52ceb7e193caff",
+        "name": "write to leafspa db",
+        "measurement": "readings",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 670,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "9aab99897b726c4a",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "483705c97b955141",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "4fb004ca8284248d",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "Past seedling?",
+        "property": "grow_stage",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "seedling",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 940,
+        "wires": [
+            [
+                "cf0e0aef5fbb50e9"
+            ]
+        ]
+    },
+    {
+        "id": "cf0e0aef5fbb50e9",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "is CO2 level below setpoint?",
+        "property": "CO2",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "CO2_max",
+                "vt": "flow"
+            },
+            {
+                "t": "gt",
+                "v": "CO2_max",
+                "vt": "flow"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 860,
+        "y": 940,
+        "wires": [
+            [
+                "924fbb8788b9fc93",
+                "8a6cf02093cdb7e4"
+            ],
+            [
+                "2c22ddd44c08a475",
+                "34407a7145c88bc5"
+            ]
+        ]
+    },
+    {
+        "id": "924fbb8788b9fc93",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "More CO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Need more CO2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1150,
+        "y": 920,
+        "wires": [
+            [
+                "60d8efba376dfdd6"
+            ]
+        ]
+    },
+    {
+        "id": "8a6cf02093cdb7e4",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "Turn CO2 on ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "192.168.86.24/1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 860,
+        "wires": [
+            [
+                "90f7f763ddbe027d"
+            ]
+        ]
+    },
+    {
+        "id": "2c22ddd44c08a475",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "CO2 OK",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "CO2 OK",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 960,
+        "wires": [
+            [
+                "60d8efba376dfdd6"
+            ]
+        ]
+    },
+    {
+        "id": "60d8efba376dfdd6",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "90f7f763ddbe027d",
+        "type": "kasa",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "2-CO2 - HS300(US)",
+        "device": "192.168.86.24/1",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 1380,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b71dc2ec5755f8e2",
+        "type": "config",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "CO2 params",
+        "properties": [
+            {
+                "p": "CO2_max",
+                "pt": "flow",
+                "to": "950",
+                "tot": "num"
+            }
+        ],
+        "active": true,
+        "x": 330,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "32c200af72af8230",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "69ebdf846a0d3107",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "27be1de9b4d9506a",
+        "type": "comment",
+        "z": "4abea758808e56d0",
+        "name": "Scenario Assumptions",
+        "info": "# Smart Plug\nAdding CO2 or vapor rely on getting/setting the smart plugs of the Kasa (TP Link) SmartPlug switch.\n\nThese are",
+        "x": 470,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "09d90076001a5c69",
+        "type": "comment",
+        "z": "4abea758808e56d0",
+        "name": "If Lights are off, the CO2 and Humidifier plugs should be off.",
+        "info": "",
+        "x": 1380,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "0aba542a5f1e1ac2",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "is humidity below setpoint?",
+        "property": "humidity",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "humidity_setpoint",
+                "vt": "global"
+            },
+            {
+                "t": "gte",
+                "v": "humidity_setpoint",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 700,
+        "y": 1200,
+        "wires": [
+            [
+                "a5e336dbed7a209b"
+            ],
+            [
+                "1bcc84bdefa18056"
+            ]
+        ]
+    },
+    {
+        "id": "b828c17d9eb8e6e1",
+        "type": "function",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "debug printout",
+        "func": "\nvar strLightsAreOn = \"true\";\n// if (msg.payload.children[0].state == 0) {\n//     strLightsAreOn = \"false\";\n// }\nvar strHumidifierOn = \"true\";\n// if (msg.payload.children[2].state == 0) {\n//     strHumidifierOn = \"false\";\n// }\n// node.warn(\"Lights are on: \" + strLightsAreOn);\n// node.warn(\"Humidifier is on: \" + strHumidifierOn);\nnode.warn(\"current humidity = \" + global.get (\"humidity\") );\nnode.warn(\"humidity setpoint = \" + flow.get(\"humidity_setpoint\"));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5e336dbed7a209b",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "Turn humidifier on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "192.168.86.24/2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 1160,
+        "wires": [
+            [
+                "c1143aee5a651a93"
+            ]
+        ]
+    },
+    {
+        "id": "a00e69359a50fa60",
+        "type": "kasa",
+        "z": "c2981ff8c433e9a6",
+        "name": "3-Humidifier - HS300(US)",
+        "device": "192.168.86.24/2",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "e7741cb1ad8d160c"
+            ]
+        ]
+    },
+    {
+        "id": "047cb3eb06765bb9",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "set humidity",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 1240,
+        "wires": [
+            [
+                "b828c17d9eb8e6e1",
+                "85c6f2ccd4776e65"
+            ]
+        ]
+    },
+    {
+        "id": "c1143aee5a651a93",
+        "type": "kasa",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "3-Humidifier - HS300(US)",
+        "device": "192.168.86.24/2",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 1250,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bcc84bdefa18056",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "Turn humidifier off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 990,
+        "y": 1220,
+        "wires": [
+            [
+                "20bd47392e128c87"
+            ]
+        ]
+    },
+    {
+        "id": "e7741cb1ad8d160c",
+        "type": "switch",
+        "z": "c2981ff8c433e9a6",
+        "name": "is humidifier on?",
+        "property": "payload.children[2].state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 600,
+        "y": 80,
+        "wires": [
+            [
+                "62fa92bf180dfae3",
+                "2b9df69124328710"
+            ],
+            [
+                "f4c23b33d11f5236"
+            ]
+        ]
+    },
+    {
+        "id": "20bd47392e128c87",
+        "type": "subflow:c2981ff8c433e9a6",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "",
+        "env": [],
+        "x": 1270,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "7243709f4f6865e3",
+        "type": "change",
+        "z": "c2981ff8c433e9a6",
+        "name": "turned off humidifier",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "turned off humidifier",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 80,
+        "wires": [
+            [
+                "695c294697a3bf2d"
+            ]
+        ]
+    },
+    {
+        "id": "695c294697a3bf2d",
+        "type": "debug",
+        "z": "c2981ff8c433e9a6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "62fa92bf180dfae3",
+        "type": "change",
+        "z": "c2981ff8c433e9a6",
+        "name": "Turn humidifier off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "192.168.86.24/2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 80,
+        "wires": [
+            [
+                "4a2d27fa86968b8a"
+            ]
+        ]
+    },
+    {
+        "id": "4a2d27fa86968b8a",
+        "type": "kasa",
+        "z": "c2981ff8c433e9a6",
+        "name": "3-Humidifier - HS300(US)",
+        "device": "192.168.86.24/2",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 1010,
+        "y": 80,
+        "wires": [
+            [
+                "7243709f4f6865e3"
+            ]
+        ]
+    },
+    {
+        "id": "bb1dfaea5945dde9",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "set CO2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 980,
+        "wires": [
+            [
+                "a2039b383c948332",
+                "edb3b81e0594ac2a"
+            ]
+        ]
+    },
+    {
+        "id": "a2039b383c948332",
+        "type": "function",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "debug printout",
+        "func": "\nvar strLightsAreOn = \"true\";\n// if (msg.payload.children[0].state == 0) {\n//     strLightsAreOn = \"false\";\n// }\nvar strHumidifierOn = \"true\";\n// if (msg.payload.children[2].state == 0) {\n//     strHumidifierOn = \"false\";\n// }\n// node.warn(\"Lights are on: \" + strLightsAreOn);\n// node.warn(\"Humidifier is on: \" + strHumidifierOn);\nnode.warn(\"**CO2 MONITORING module** CO2 = \" + global.get (\"CO2\") );\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2e28c0744026da6",
+        "type": "kasa",
+        "z": "0db68c550f681be0",
+        "name": "2-CO2 - HS300(US)",
+        "device": "192.168.86.24/1",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "0e6c532e04d2c58f"
+            ]
+        ]
+    },
+    {
+        "id": "0e6c532e04d2c58f",
+        "type": "switch",
+        "z": "0db68c550f681be0",
+        "name": "is CO2 on?",
+        "property": "payload.children[1].state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "dad8b98634d74309",
+                "2f858bc05bbfae9c"
+            ],
+            [
+                "e3ae0faab13290c9"
+            ]
+        ]
+    },
+    {
+        "id": "dad8b98634d74309",
+        "type": "change",
+        "z": "0db68c550f681be0",
+        "name": "Turn CO2 off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "192.168.86.24/1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 140,
+        "wires": [
+            [
+                "94dc40ce104d0834"
+            ]
+        ]
+    },
+    {
+        "id": "94dc40ce104d0834",
+        "type": "kasa",
+        "z": "0db68c550f681be0",
+        "name": "2-CO2 - HS300(US)",
+        "device": "192.168.86.24/1",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 900,
+        "y": 140,
+        "wires": [
+            [
+                "f4e96404f180b82e"
+            ]
+        ]
+    },
+    {
+        "id": "f4e96404f180b82e",
+        "type": "change",
+        "z": "0db68c550f681be0",
+        "name": "turned off CO2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "turned off CO2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 140,
+        "wires": [
+            [
+                "920320c7f95de221"
+            ]
+        ]
+    },
+    {
+        "id": "920320c7f95de221",
+        "type": "debug",
+        "z": "0db68c550f681be0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "71eb9a25fe38c767",
+        "type": "change",
+        "z": "0db68c550f681be0",
+        "name": "Get CO2 Plug info",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "getInfo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "192.168.86.24/1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "f2e28c0744026da6"
+            ]
+        ]
+    },
+    {
+        "id": "2f858bc05bbfae9c",
+        "type": "function",
+        "z": "0db68c550f681be0",
+        "name": "debug print",
+        "func": "node.warn(\"**TURN CO2 OFF SUBFLOW** CO2 is on, turning off....\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34407a7145c88bc5",
+        "type": "subflow:0db68c550f681be0",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "turn CO2 OFF",
+        "env": [],
+        "x": 1140,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "a95f0f256c955bf7",
+        "type": "comment",
+        "z": "4abea758808e56d0",
+        "g": "483705c97b955141",
+        "name": "References",
+        "info": "- [Installing InfluxDB & Grafana on Raspberry Pi](https://simonhearne.com/2020/pi-influx-grafana/)\n- \nNote: Can't use Grafana on a Raspberry Pi Zero:\n\n_I’ve seen this error too. The error is a result of trying to use your ARMv7 binary on ARMv6. All the quad-core Pi’s (2, 3 and 3+) are v7 while the single-core (A, B, and Zero) are v6. Installation works fine since Raspbian is “armhf”, however the binary will get a SIGKILL due to illegal instructions._\nfrom [Grafana won’t start on Raspberry Pi](https://community.grafana.com/t/grafana-wont-start-on-raspberry-pi/8525/11)\n",
+        "x": 420,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "2994c65a03819980",
+        "type": "comment",
+        "z": "8b70799ce97cf17d",
+        "name": "References",
+        "info": "- doing a `uname -a` on the pi zerow shows the chip to be Armv6 and not Armv7.  This is unfortunate because the \"normal\" Grafana install wants armv7.\n\nI found a website that gave directions for installing Grafana on a pi zero:\n- [Grafana and InfluxDB on a Pi](https://brettbeeson.com.au/grafana-and-influxdb-in-pi-zero-w/)\n- \nAfter install, I did a `sudo apt-get update` and then started the `grafana-server`.\n\nThere are several pages on nodered/tp-link with different commands.  It seems the command set used by this install is at:\n- [tplink github with commands](https://github.com/caseyjhol/node-red-contrib-tplink)",
+        "x": 520,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e3ae0faab13290c9",
+        "type": "function",
+        "z": "0db68c550f681be0",
+        "name": "debug print",
+        "func": "node.warn(\"**TURN CO2 OFF SUBFLOW** ...CO2 is not on... \")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "505176a5010584f8",
+        "type": "kasa",
+        "z": "050af3e6e2b7e30f",
+        "name": "1- LED lights - HS300(US)",
+        "device": "192.168.86.24/0",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 520,
+        "y": 240,
+        "wires": [
+            [
+                "da1a0268a8460fe6"
+            ]
+        ]
+    },
+    {
+        "id": "da1a0268a8460fe6",
+        "type": "switch",
+        "z": "050af3e6e2b7e30f",
+        "name": "are Lights on?",
+        "property": "payload.children[0].state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 760,
+        "y": 240,
+        "wires": [
+            [
+                "23613ea3953771a6"
+            ],
+            [
+                "d17700c738ecbb31"
+            ]
+        ]
+    },
+    {
+        "id": "23613ea3953771a6",
+        "type": "change",
+        "z": "050af3e6e2b7e30f",
+        "name": "Lights are ON",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Lights are ON MODULE",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "LIGHTS_ON",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 220,
+        "wires": [
+            [
+                "db510cdbd82575a7"
+            ]
+        ]
+    },
+    {
+        "id": "d17700c738ecbb31",
+        "type": "change",
+        "z": "050af3e6e2b7e30f",
+        "name": "Lights are OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Lights are OFF",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "LIGHTS_ON",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 260,
+        "wires": [
+            [
+                "984089e0d69c9833"
+            ]
+        ]
+    },
+    {
+        "id": "a843f58ac62eb4cc",
+        "type": "change",
+        "z": "050af3e6e2b7e30f",
+        "name": "Send getInfo to LED plug",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "getInfo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "192.168.86.24/0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "505176a5010584f8"
+            ]
+        ]
+    },
+    {
+        "id": "db510cdbd82575a7",
+        "type": "function",
+        "z": "050af3e6e2b7e30f",
+        "name": "debug printout",
+        "func": "\nvar strLightsAreOn = \"true\";\n// if (msg.payload.children[0].state == 0) {\n//     strLightsAreOn = \"false\";\n// }\nvar strHumidifierOn = \"true\";\n// if (msg.payload.children[2].state == 0) {\n//     strHumidifierOn = \"false\";\n// }\n// node.warn(\"Lights are on: \" + strLightsAreOn);\n// node.warn(\"Humidifier is on: \" + strHumidifierOn);\nnode.warn(\"**Are Lights ON subflow** Lights are ON \"  );\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "984089e0d69c9833",
+        "type": "function",
+        "z": "050af3e6e2b7e30f",
+        "name": "debug printout",
+        "func": "\nvar strLightsAreOn = \"true\";\n// if (msg.payload.children[0].state == 0) {\n//     strLightsAreOn = \"false\";\n// }\nvar strHumidifierOn = \"true\";\n// if (msg.payload.children[2].state == 0) {\n//     strHumidifierOn = \"false\";\n// }\n// node.warn(\"Lights are on: \" + strLightsAreOn);\n// node.warn(\"Humidifier is on: \" + strHumidifierOn);\nnode.warn(\"**Are Lights ON subflow** Lights are OFF\"  );\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85c6f2ccd4776e65",
+        "type": "subflow:050af3e6e2b7e30f",
+        "z": "4abea758808e56d0",
+        "g": "17fe1c864a14a05b",
+        "name": "",
+        "env": [],
+        "x": 440,
+        "y": 1240,
+        "wires": [
+            [
+                "0aba542a5f1e1ac2"
+            ],
+            [
+                "20bd47392e128c87"
+            ]
+        ]
+    },
+    {
+        "id": "0c10701c124d9652",
+        "type": "config",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "humidity params",
+        "properties": [
+            {
+                "p": "humidity_seedling",
+                "pt": "global",
+                "to": "70",
+                "tot": "num"
+            },
+            {
+                "p": "humidity_veg",
+                "pt": "global",
+                "to": "60",
+                "tot": "num"
+            },
+            {
+                "p": "humidity_flower",
+                "pt": "global",
+                "to": "45",
+                "tot": "num"
+            }
+        ],
+        "active": true,
+        "x": 140,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "edb5d202c65055ae",
+        "type": "switch",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "seedling?",
+        "property": "grow_stage",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "seedling",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 600,
+        "wires": [
+            [
+                "2270e22d655962ab"
+            ]
+        ]
+    },
+    {
+        "id": "283564a90c3644bd",
+        "type": "inject",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "Set humidity setpoint based on grow stage",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 660,
+        "wires": [
+            [
+                "edb5d202c65055ae",
+                "63da71d4c7af9093",
+                "4ec71986b323618c"
+            ]
+        ]
+    },
+    {
+        "id": "2270e22d655962ab",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "set humidity setpoint to seedling's",
+        "rules": [
+            {
+                "t": "set",
+                "p": "humidity_setpoint",
+                "pt": "global",
+                "to": "humidity_seedling",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 600,
+        "wires": [
+            [
+                "22ee6de07ad111f0"
+            ]
+        ]
+    },
+    {
+        "id": "63da71d4c7af9093",
+        "type": "switch",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "veg?",
+        "property": "grow_stage",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "veg",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "31c15103344bd46d"
+            ]
+        ]
+    },
+    {
+        "id": "31c15103344bd46d",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "set humidity setpoint to veg's",
+        "rules": [
+            {
+                "t": "set",
+                "p": "humidity_setpoint",
+                "pt": "global",
+                "to": "humidity_veg",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 660,
+        "wires": [
+            [
+                "22ee6de07ad111f0"
+            ]
+        ]
+    },
+    {
+        "id": "4ec71986b323618c",
+        "type": "switch",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "flowering?",
+        "property": "grow_stage",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "flower",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "a30d46a3add1ea11"
+            ]
+        ]
+    },
+    {
+        "id": "a30d46a3add1ea11",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "set humidity setpoint to flower's",
+        "rules": [
+            {
+                "t": "set",
+                "p": "humidity_setpoint",
+                "pt": "global",
+                "to": "humidity_flower",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 720,
+        "wires": [
+            [
+                "22ee6de07ad111f0"
+            ]
+        ]
+    },
+    {
+        "id": "22ee6de07ad111f0",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "humidity_setpoint",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1020,
+        "y": 660,
+        "wires": [
+            [
+                "94aa72c68daa4225"
+            ]
+        ]
+    },
+    {
+        "id": "94aa72c68daa4225",
+        "type": "debug",
+        "z": "8b70799ce97cf17d",
+        "g": "3af2676ba4920b7f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "a3b09164372d24f0",
+        "type": "change",
+        "z": "c2981ff8c433e9a6",
+        "name": "Get humidity plug info",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "getInfo",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "192.168.86.24/2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "a00e69359a50fa60"
+            ]
+        ]
+    },
+    {
+        "id": "edb3b81e0594ac2a",
+        "type": "subflow:050af3e6e2b7e30f",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "",
+        "env": [],
+        "x": 420,
+        "y": 960,
+        "wires": [
+            [
+                "4fb004ca8284248d"
+            ],
+            [
+                "34407a7145c88bc5"
+            ]
+        ]
+    },
+    {
+        "id": "ff8a9fd5c1a89e32",
+        "type": "kasa",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "1- LED lights - HS300(US)",
+        "device": "192.168.86.24/0",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 540,
+        "y": 1500,
+        "wires": [
+            [
+                "ea863298eae9d267"
+            ]
+        ]
+    },
+    {
+        "id": "2bcaf477fc40c569",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "use StartPowerEvents to check lights",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "192.168.86.24/0",
+        "payload": "startPowerEvents",
+        "payloadType": "str",
+        "x": 350,
+        "y": 1460,
+        "wires": [
+            [
+                "ff8a9fd5c1a89e32"
+            ]
+        ]
+    },
+    {
+        "id": "ea863298eae9d267",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.powerOn",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 1500,
+        "wires": [
+            [
+                "764be95d892e7e97",
+                "f781225b90b72e9c"
+            ]
+        ]
+    },
+    {
+        "id": "764be95d892e7e97",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "LED ON?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 980,
+        "y": 1500,
+        "wires": [
+            [
+                "7a03b95f8c98c4bc"
+            ],
+            [
+                "39a9abd67cdabbce",
+                "34a2a5440f93b384",
+                "df5ab8a96fd22ba4"
+            ]
+        ]
+    },
+    {
+        "id": "7a03b95f8c98c4bc",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "led IS ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1190,
+        "y": 1460,
+        "wires": [
+            [
+                "17bfe4ebdbd4b9dc"
+            ]
+        ]
+    },
+    {
+        "id": "39a9abd67cdabbce",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "led IS Off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 1520,
+        "wires": [
+            [
+                "17bfe4ebdbd4b9dc"
+            ]
+        ]
+    },
+    {
+        "id": "17bfe4ebdbd4b9dc",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "34a2a5440f93b384",
+        "type": "subflow:0db68c550f681be0",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "",
+        "x": 1160,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "df5ab8a96fd22ba4",
+        "type": "subflow:c2981ff8c433e9a6",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "",
+        "x": 1180,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "2b9df69124328710",
+        "type": "function",
+        "z": "c2981ff8c433e9a6",
+        "name": "debug print",
+        "func": "node.warn(\"**TURN humidifier OFF SUBFLOW** humidifier is on, turning off....\")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4c23b33d11f5236",
+        "type": "function",
+        "z": "c2981ff8c433e9a6",
+        "name": "debug print",
+        "func": "node.warn(\"**TURN humidifier OFF SUBFLOW** ...humidifier is not on... \")\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6eda788c5d630d9",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "getInfo",
+        "payloadType": "str",
+        "x": 600,
+        "y": 1940,
+        "wires": [
+            [
+                "9a8259e2b1a1cc54"
+            ]
+        ]
+    },
+    {
+        "id": "9a8259e2b1a1cc54",
+        "type": "kasa",
+        "z": "4abea758808e56d0",
+        "name": "1- LED lights - HS300(US)",
+        "device": "192.168.86.24/0",
+        "interval": 60000,
+        "eventInterval": 15000,
+        "payload": "getInfo",
+        "payloadType": "info",
+        "debug": false,
+        "x": 840,
+        "y": 1940,
+        "wires": [
+            [
+                "13b2c5c8f804d48d"
+            ]
+        ]
+    },
+    {
+        "id": "13b2c5c8f804d48d",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "a686efe96fe20a29",
+        "type": "e-mail",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "happyday.mjohnson@gmail.com",
+        "dname": "send email LED ON/OFF change",
+        "x": 840,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "f781225b90b72e9c",
+        "type": "function",
+        "z": "4abea758808e56d0",
+        "g": "2ac6b0fbb850f457",
+        "name": "",
+        "func": "if (msg.payload == true){\n    msg.payload = \"Lights turned ON\"\n}else {\n    msg.payload = \"Lights turned OFF\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1580,
+        "wires": [
+            [
+                "a686efe96fe20a29"
+            ]
+        ]
+    }
+]
