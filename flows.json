@@ -260,7 +260,8 @@
             "bb1dfaea5945dde9",
             "a2039b383c948332",
             "34407a7145c88bc5",
-            "edb3b81e0594ac2a"
+            "edb3b81e0594ac2a",
+            "94f27057f3bbf55a"
         ],
         "x": 134,
         "y": 819,
@@ -1252,7 +1253,8 @@
         "y": 940,
         "wires": [
             [
-                "cf0e0aef5fbb50e9"
+                "cf0e0aef5fbb50e9",
+                "94f27057f3bbf55a"
             ]
         ]
     },
@@ -1515,7 +1517,7 @@
         "z": "4abea758808e56d0",
         "g": "17fe1c864a14a05b",
         "name": "debug printout",
-        "func": "\nvar strLightsAreOn = \"true\";\n// if (msg.payload.children[0].state == 0) {\n//     strLightsAreOn = \"false\";\n// }\nvar strHumidifierOn = \"true\";\n// if (msg.payload.children[2].state == 0) {\n//     strHumidifierOn = \"false\";\n// }\n// node.warn(\"Lights are on: \" + strLightsAreOn);\n// node.warn(\"Humidifier is on: \" + strHumidifierOn);\nnode.warn(\"current humidity = \" + global.get (\"humidity\") );\nnode.warn(\"humidity setpoint = \" + flow.get(\"humidity_setpoint\"));\nreturn msg;",
+        "func": "\nvar strLightsAreOn = \"true\";\n// if (msg.payload.children[0].state == 0) {\n//     strLightsAreOn = \"false\";\n// }\nvar strHumidifierOn = \"true\";\n// if (msg.payload.children[2].state == 0) {\n//     strHumidifierOn = \"false\";\n// }\n// node.warn(\"Lights are on: \" + strLightsAreOn);\n// node.warn(\"Humidifier is on: \" + strHumidifierOn);\nnode.warn(\"current humidity = \" + global.get (\"humidity\") );\nnode.warn(\"humidity setpoint = \" + global.get(\"humidity_setpoint\"));\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2381,7 +2383,8 @@
             [
                 "edb5d202c65055ae",
                 "63da71d4c7af9093",
-                "4ec71986b323618c"
+                "4ec71986b323618c",
+                "d60dd2affb70912b"
             ]
         ]
     },
@@ -2397,7 +2400,7 @@
                 "p": "humidity_setpoint",
                 "pt": "global",
                 "to": "humidity_seedling",
-                "tot": "flow"
+                "tot": "global"
             }
         ],
         "action": "",
@@ -2451,7 +2454,7 @@
                 "p": "humidity_setpoint",
                 "pt": "global",
                 "to": "humidity_veg",
-                "tot": "flow"
+                "tot": "global"
             }
         ],
         "action": "",
@@ -2954,5 +2957,82 @@
                 "a686efe96fe20a29"
             ]
         ]
+    },
+    {
+        "id": "d60dd2affb70912b",
+        "type": "function",
+        "z": "8b70799ce97cf17d",
+        "name": "debug printout",
+        "func": "\nvar strLightsAreOn = \"true\";\n// if (msg.payload.children[0].state == 0) {\n//     strLightsAreOn = \"false\";\n// }\nvar strHumidifierOn = \"true\";\n// if (msg.payload.children[2].state == 0) {\n//     strHumidifierOn = \"false\";\n// }\n// node.warn(\"Lights are on: \" + strLightsAreOn);\n// node.warn(\"Humidifier is on: \" + strHumidifierOn);\nnode.warn(\"global.grow_stage = \"+ global.get (\"grow_stage\") );\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "94f27057f3bbf55a",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "ded8c047f0f2ca39",
+        "type": "rpi-gpio in",
+        "z": "4abea758808e56d0",
+        "name": "Photoresistor",
+        "pin": "7",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "x": 560,
+        "y": 2120,
+        "wires": [
+            [
+                "b770bc5816f84046"
+            ]
+        ]
+    },
+    {
+        "id": "b770bc5816f84046",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "6a8a69efe85167b3",
+        "type": "comment",
+        "z": "4abea758808e56d0",
+        "name": "Use Photoresistor to see if LED lights on or off",
+        "info": "I am having a challenge where the LED plug is going off and I'm not getting notified.\n\nBy using a photoresistor, I have another way of knowing if the LED light is on or off.  And probably more reliable.",
+        "x": 700,
+        "y": 2040,
+        "wires": []
     }
 ]
