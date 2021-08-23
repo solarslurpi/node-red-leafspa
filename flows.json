@@ -1445,7 +1445,7 @@
         "z": "4abea758808e56d0",
         "g": "69ebdf846a0d3107",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3001,16 +3001,167 @@
         "intype": "tri",
         "debounce": "25",
         "read": true,
-        "x": 560,
+        "x": 510,
         "y": 2120,
         "wires": [
             [
-                "b770bc5816f84046"
+                "977bac5520bd9fd0",
+                "0552318a36578d72"
             ]
         ]
     },
     {
-        "id": "b770bc5816f84046",
+        "id": "6a8a69efe85167b3",
+        "type": "comment",
+        "z": "4abea758808e56d0",
+        "name": "Use Photoresistor to see if LED lights on or off",
+        "info": "I am having a challenge where the LED plug is going off and I'm not getting notified.\n\nBy using a photoresistor, I have another way of knowing if the LED light is on or off.  And probably more reliable.",
+        "x": 670,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "977bac5520bd9fd0",
+        "type": "function",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "func": "if (msg.payload == 0){\n    msg.payload = \"PR says Lights turned ON\"\n}else {\n    msg.payload = \"PR says Lights turned OFF\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 2200,
+        "wires": [
+            [
+                "25c8d353e4187621"
+            ]
+        ]
+    },
+    {
+        "id": "25c8d353e4187621",
+        "type": "e-mail",
+        "z": "4abea758808e56d0",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "happyday.mjohnson@gmail.com",
+        "dname": "send email LED ON/OFF change",
+        "x": 860,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "0552318a36578d72",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "name": "LED ON?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 740,
+        "y": 2120,
+        "wires": [
+            [
+                "84d9b0128658f98f"
+            ],
+            [
+                "c9f98a5e2f9db21a",
+                "00775963383e4f83",
+                "845768e747650566"
+            ]
+        ]
+    },
+    {
+        "id": "00775963383e4f83",
+        "type": "subflow:0db68c550f681be0",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "x": 1140,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "845768e747650566",
+        "type": "subflow:c2981ff8c433e9a6",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "x": 1150,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "c9f98a5e2f9db21a",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "led IS Off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 2080,
+        "wires": [
+            [
+                "73a8eb62e138c3e0"
+            ]
+        ]
+    },
+    {
+        "id": "84d9b0128658f98f",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "led IS ON",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 2040,
+        "wires": [
+            [
+                "73a8eb62e138c3e0"
+            ]
+        ]
+    },
+    {
+        "id": "73a8eb62e138c3e0",
         "type": "debug",
         "z": "4abea758808e56d0",
         "name": "",
@@ -3021,18 +3172,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 2120,
-        "wires": []
-    },
-    {
-        "id": "6a8a69efe85167b3",
-        "type": "comment",
-        "z": "4abea758808e56d0",
-        "name": "Use Photoresistor to see if LED lights on or off",
-        "info": "I am having a challenge where the LED plug is going off and I'm not getting notified.\n\nBy using a photoresistor, I have another way of knowing if the LED light is on or off.  And probably more reliable.",
-        "x": 700,
-        "y": 2040,
+        "x": 1190,
+        "y": 2060,
         "wires": []
     }
 ]
