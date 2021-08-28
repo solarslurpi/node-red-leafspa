@@ -14,6 +14,13 @@
         "info": ""
     },
     {
+        "id": "ede5c076f6168a6c",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "c2981ff8c433e9a6",
         "type": "subflow",
         "name": "turn humidifier OFF",
@@ -58,23 +65,33 @@
         "color": "#DDAA99"
     },
     {
-        "id": "69ebdf846a0d3107",
-        "type": "group",
-        "z": "4abea758808e56d0",
-        "name": "Read and Display Sensor Readings",
-        "style": {
-            "stroke": "#92d04f",
-            "fill": "#c8e7a7",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "c1f9dd9005199070"
+        "id": "b4973237.46ab6",
+        "type": "subflow",
+        "name": "Process Simulation",
+        "info": "",
+        "in": [
+            {
+                "x": 37,
+                "y": 103,
+                "wires": [
+                    {
+                        "id": "ec719d4d.0d54f8"
+                    }
+                ]
+            }
         ],
-        "x": 108,
-        "y": 73,
-        "w": 1004,
-        "h": 354
+        "out": [
+            {
+                "x": 728.5,
+                "y": 294,
+                "wires": [
+                    {
+                        "id": "ae1a6e5.d4c0d9",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": "76681dea68e7073e",
@@ -230,64 +247,6 @@
         "h": 182
     },
     {
-        "id": "c1f9dd9005199070",
-        "type": "group",
-        "z": "4abea758808e56d0",
-        "g": "69ebdf846a0d3107",
-        "name": "Take Readings from scd30 sensor",
-        "style": {
-            "stroke": "#92d04f",
-            "fill": "#e3f3d3",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "11e485116eee57f2",
-            "2c8490d8f1428d06",
-            "109fb15ca23f61de",
-            "dfcd0478bf2416e5",
-            "73e9b65f7062e826",
-            "84278bf54d79cd76",
-            "ff1491759ab107b3",
-            "35ae8f14df4e6a62",
-            "d66cdba9a473ecf7",
-            "7369975ab5993df5",
-            "32c200af72af8230",
-            "a4eacd80d5527866",
-            "49a3d464b6d7bee8",
-            "285f2a0d9577319e"
-        ],
-        "x": 134,
-        "y": 99,
-        "w": 952,
-        "h": 302
-    },
-    {
-        "id": "5d428ac7cc9afdba",
-        "type": "group",
-        "z": "8b70799ce97cf17d",
-        "g": "76681dea68e7073e",
-        "name": "",
-        "style": {
-            "fill": "#ffffff",
-            "label": true
-        },
-        "nodes": [
-            "8822dd6ccf3225b3",
-            "91a3fa3e8f89a982",
-            "7f34c2b988437de1",
-            "5225ce5babb7bee3",
-            "761452fe79ffb890",
-            "3f895add12630d1d",
-            "969c8b674bd2f6c7",
-            "e90de7a5395607eb"
-        ],
-        "x": 114,
-        "y": 259,
-        "w": 1432,
-        "h": 242
-    },
-    {
         "id": "11670cc3ba018b59",
         "type": "group",
         "z": "4abea758808e56d0",
@@ -317,6 +276,67 @@
         "y": 439,
         "w": 1332,
         "h": 342
+    },
+    {
+        "id": "c1f9dd9005199070",
+        "type": "group",
+        "z": "4abea758808e56d0",
+        "name": "Take Readings from scd30 sensor",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#e3f3d3",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "11e485116eee57f2",
+            "2c8490d8f1428d06",
+            "109fb15ca23f61de",
+            "dfcd0478bf2416e5",
+            "73e9b65f7062e826",
+            "84278bf54d79cd76",
+            "ff1491759ab107b3",
+            "35ae8f14df4e6a62",
+            "d66cdba9a473ecf7",
+            "7369975ab5993df5",
+            "32c200af72af8230",
+            "a4eacd80d5527866",
+            "49a3d464b6d7bee8",
+            "285f2a0d9577319e",
+            "1719f5a5a4164309",
+            "0673833916e00a97",
+            "a1296ba7044ee47f",
+            "81cb106ae918aa73"
+        ],
+        "x": 114,
+        "y": 79,
+        "w": 1112,
+        "h": 342
+    },
+    {
+        "id": "5d428ac7cc9afdba",
+        "type": "group",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "",
+        "style": {
+            "fill": "#ffffff",
+            "label": true
+        },
+        "nodes": [
+            "8822dd6ccf3225b3",
+            "91a3fa3e8f89a982",
+            "7f34c2b988437de1",
+            "5225ce5babb7bee3",
+            "761452fe79ffb890",
+            "3f895add12630d1d",
+            "969c8b674bd2f6c7",
+            "e90de7a5395607eb"
+        ],
+        "x": 114,
+        "y": 259,
+        "w": 1432,
+        "h": 242
     },
     {
         "id": "bd52ceb7e193caff",
@@ -457,6 +477,119 @@
         "id": "35870709b5fb5fcf",
         "type": "ui_tab",
         "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c45a83a3.d00908",
+        "type": "ui_group",
+        "name": "PID",
+        "tab": "80cd4062.93a5",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "80cd4062.93a5",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard"
+    },
+    {
+        "id": "55104359.ae8f1c",
+        "type": "ui_group",
+        "name": "Heater Setpoints",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 4,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "ae012c4c.e138b",
+        "type": "ui_group",
+        "name": "Dehumidifier Setpoints",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 6,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "9808fb7a.a5a668",
+        "type": "ui_group",
+        "name": "VPD",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 3,
+        "disp": false,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "7deea9a6.d96288",
+        "type": "ui_group",
+        "name": "Temperature Monitoring",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 2,
+        "disp": false,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "89978d32.271a5",
+        "type": "ui_group",
+        "name": "Humidity Monitoring",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 1,
+        "disp": false,
+        "width": "7",
+        "collapse": false
+    },
+    {
+        "id": "218993f3.dd413c",
+        "type": "ui_group",
+        "name": "Exhaust Setpoints",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 8,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "b806f09.05ae81",
+        "type": "ui_group",
+        "name": "Humidifier Setpoints",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 7,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "7999bcbc.c400c4",
+        "type": "ui_group",
+        "name": "Lighting",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 8,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "875b2792.d32768",
+        "type": "ui_group",
+        "name": "Fertigation",
+        "tab": "14f7bbb4.c9d2b4",
+        "order": 9,
+        "disp": true,
+        "width": "7",
+        "collapse": true
+    },
+    {
+        "id": "14f7bbb4.c9d2b4",
+        "type": "ui_tab",
+        "name": "GardenBro",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -669,7 +802,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 310,
+        "x": 290,
         "y": 160,
         "wires": [
             [
@@ -683,7 +816,7 @@
         "z": "4abea758808e56d0",
         "g": "c1f9dd9005199070",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -691,8 +824,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 970,
-        "y": 180,
+        "x": 1110,
+        "y": 160,
         "wires": []
     },
     {
@@ -726,12 +859,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 530,
+        "x": 510,
         "y": 260,
         "wires": [
             [
-                "35ae8f14df4e6a62",
-                "49a3d464b6d7bee8"
+                "a1296ba7044ee47f"
             ]
         ]
     },
@@ -755,12 +887,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
+        "x": 530,
         "y": 220,
         "wires": [
             [
-                "109fb15ca23f61de",
-                "a4eacd80d5527866"
+                "1719f5a5a4164309"
             ]
         ]
     },
@@ -784,12 +915,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 520,
         "y": 320,
         "wires": [
             [
-                "d66cdba9a473ecf7",
-                "285f2a0d9577319e"
+                "0673833916e00a97"
             ]
         ]
     },
@@ -813,7 +943,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
+        "x": 880,
         "y": 260,
         "wires": [
             [
@@ -835,7 +965,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 930,
+        "x": 1070,
         "y": 260,
         "wires": []
     },
@@ -859,8 +989,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
-        "y": 180,
+        "x": 920,
+        "y": 160,
         "wires": [
             [
                 "ff1491759ab107b3"
@@ -887,7 +1017,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 710,
+        "x": 870,
         "y": 360,
         "wires": [
             [
@@ -1062,7 +1192,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
+        "x": 1090,
         "y": 360,
         "wires": []
     },
@@ -1656,7 +1786,7 @@
         "g": "c1f9dd9005199070",
         "scd30Config": "1ea5dfa03b11893e",
         "name": "scd30",
-        "x": 390,
+        "x": 370,
         "y": 260,
         "wires": [
             [
@@ -1889,6 +2019,7 @@
         "id": "b01650a105e9d838",
         "type": "e-mail",
         "z": "8b70799ce97cf17d",
+        "d": true,
         "g": "ba872fe6adc0f262",
         "server": "smtp.gmail.com",
         "port": "465",
@@ -1983,8 +2114,8 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 710,
-        "y": 140,
+        "x": 890,
+        "y": 120,
         "wires": [
             []
         ]
@@ -2027,7 +2158,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 710,
+        "x": 850,
         "y": 220,
         "wires": [
             []
@@ -2071,7 +2202,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 720,
+        "x": 820,
         "y": 320,
         "wires": [
             []
@@ -2454,8 +2585,8 @@
         "z": "4abea758808e56d0",
         "name": "DOCUMENTATION: What's going on",
         "info": "# Reading Temp, Humidity, CO2 values\nOver and over, the [scd 30 sensor](https://learn.adafruit.com/adafruit-scd30) is read to provide info on the temperature, CO2 level, and humidity level.  These readings are stored in variables that are used during data logging and monitoring.\n\n# Writing and Viewing Readings\nEvery so often, the values read from the scd30 are stored in an influx database (database name = `leafspa` measurements are within `readings`).  Grafana is used to view the readings.",
-        "x": 570,
-        "y": 60,
+        "x": 580,
+        "y": 20,
         "wires": []
     },
     {
@@ -2589,7 +2720,7 @@
         "type": "change",
         "z": "4abea758808e56d0",
         "g": "11670cc3ba018b59",
-        "name": "send CO2 state value",
+        "name": "send CO2 plug state value",
         "rules": [
             {
                 "t": "set",
@@ -2611,7 +2742,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
+        "x": 960,
         "y": 480,
         "wires": [
             [
@@ -2624,7 +2755,7 @@
         "type": "change",
         "z": "4abea758808e56d0",
         "g": "11670cc3ba018b59",
-        "name": "send humidity state value",
+        "name": "send humidity plug state value",
         "rules": [
             {
                 "t": "set",
@@ -2646,7 +2777,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
+        "x": 970,
         "y": 560,
         "wires": [
             [
@@ -2967,6 +3098,504 @@
         "statusType": "auto",
         "x": 890,
         "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7fe4b5c3.32e58c",
+        "type": "function",
+        "z": "b4973237.46ab6",
+        "name": "30 sec RC + 20",
+        "func": "// Applies a simple RC low pass filter to incoming payload values\nvar tc = 30*1000;       // time constant in milliseconds\n\nvar lastValue = context.get('lastValue');\nif (typeof lastValue == \"undefined\") lastValue = msg.payload;\nvar lastTime = context.get('lastTime') || null;\nvar now = new Date();\nvar currentValue = msg.payload;\nif (lastTime === null) {\n    // first time through\n    newValue = currentValue;\n} else {\n    var dt = now - lastTime;\n    var newValue;\n    \n    if (dt > 0) {\n        var dtotc = dt / tc;\n        newValue = lastValue * (1 - dtotc) + currentValue * dtotc;\n    } else {\n        // no time has elapsed leave output the same as last time\n        newValue = lastValue;\n    }\n}\ncontext.set('lastValue', newValue);\ncontext.set('lastTime', now);\n\nmsg.payload = newValue + 20;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 626.5,
+        "y": 207,
+        "wires": [
+            [
+                "ae1a6e5.d4c0d9"
+            ]
+        ]
+    },
+    {
+        "id": "1bacd004.9753c",
+        "type": "inject",
+        "z": "b4973237.46ab6",
+        "name": "Inject -0.2 at start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "-0.2",
+        "payloadType": "num",
+        "x": 134.5,
+        "y": 30,
+        "wires": [
+            [
+                "ec719d4d.0d54f8"
+            ]
+        ]
+    },
+    {
+        "id": "999a52c2.f465f",
+        "type": "function",
+        "z": "b4973237.46ab6",
+        "name": "10 sec RC",
+        "func": "// Applies a simple RC low pass filter to incoming payload values\nvar tc = 10*1000;       // time constant in milliseconds\n\nvar lastValue = context.get('lastValue');\nif (typeof lastValue == \"undefined\") lastValue = msg.payload;\nvar lastTime = context.get('lastTime') || null;\nvar now = new Date();\nvar currentValue = msg.payload;\nif (lastTime === null) {\n    // first time through\n    newValue = currentValue;\n} else {\n    var dt = now - lastTime;\n    var newValue;\n    \n    if (dt > 0) {\n        var dtotc = dt / tc;\n        newValue = lastValue * (1 - dtotc) + currentValue * dtotc;\n    } else {\n        // no time has elapsed leave output the same as last time\n        newValue = lastValue;\n    }\n}\ncontext.set('lastValue', newValue);\ncontext.set('lastTime', now);\n\nmsg.payload = newValue;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 451,
+        "y": 207,
+        "wires": [
+            [
+                "7fe4b5c3.32e58c"
+            ]
+        ]
+    },
+    {
+        "id": "ec719d4d.0d54f8",
+        "type": "delay",
+        "z": "b4973237.46ab6",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 268,
+        "y": 104,
+        "wires": [
+            [
+                "ede39236.1961f8"
+            ]
+        ]
+    },
+    {
+        "id": "a823c9cf.2a6178",
+        "type": "function",
+        "z": "b4973237.46ab6",
+        "name": "2 msg transport delay",
+        "func": "// stores messages in a fifo until the specified number have been received, \n// then releases them as new messages are received.\n// during the filling phase the earliest message is passed on each time \n// a message is received, but it is also left in the fifo\nvar fifoMaxLength = 2;\nvar fifo = context.get('fifo') || [];\n// push the new message onto the top of the array, messages are shifted down and\n// drop off the front\nvar length = fifo.push(msg);  // returns new length\nif (length > fifoMaxLength) {\n    newMsg = fifo.shift();\n} else {\n    // not full yet, make a copy of the msg and pass it on\n    var newMsg = JSON.parse(JSON.stringify(fifo[0]));\n}\ncontext.set('fifo', fifo);\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 258,
+        "y": 208,
+        "wires": [
+            [
+                "999a52c2.f465f"
+            ]
+        ]
+    },
+    {
+        "id": "ae1a6e5.d4c0d9",
+        "type": "function",
+        "z": "b4973237.46ab6",
+        "name": "Clear all except payload",
+        "func": "msg2 = {payload: msg.payload};\nreturn msg2;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 545,
+        "y": 293,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ede39236.1961f8",
+        "type": "range",
+        "z": "b4973237.46ab6",
+        "minin": "0",
+        "maxin": "1",
+        "minout": "0",
+        "maxout": "100",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "x": 87,
+        "y": 208,
+        "wires": [
+            [
+                "a823c9cf.2a6178"
+            ]
+        ]
+    },
+    {
+        "id": "e0cb2a8c.4402a8",
+        "type": "PID",
+        "z": "ede5c076f6168a6c",
+        "name": "",
+        "setpoint": "50",
+        "pb": "0",
+        "ti": "0",
+        "td": "0",
+        "integral_default": "0",
+        "smooth_factor": "0",
+        "max_interval": 600,
+        "enable": "1",
+        "disabled_op": "0",
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "5ec4239b.34e174",
+                "e94f888a.130a88"
+            ]
+        ]
+    },
+    {
+        "id": "f70949c8.aab988",
+        "type": "change",
+        "z": "ede5c076f6168a6c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "op",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 889.5,
+        "y": 335,
+        "wires": [
+            [
+                "9f58a52d.076dd"
+            ]
+        ]
+    },
+    {
+        "id": "2792f805.066c78",
+        "type": "inject",
+        "z": "ede5c076f6168a6c",
+        "name": "Setpoint 30",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "setpoint",
+        "payload": "30",
+        "payloadType": "num",
+        "x": 392,
+        "y": 283,
+        "wires": [
+            [
+                "e0cb2a8c.4402a8"
+            ]
+        ]
+    },
+    {
+        "id": "1bf3ce16.c3ae02",
+        "type": "inject",
+        "z": "ede5c076f6168a6c",
+        "name": "Setpoint 80",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "setpoint",
+        "payload": "80",
+        "payloadType": "num",
+        "x": 390.5,
+        "y": 332,
+        "wires": [
+            [
+                "e0cb2a8c.4402a8"
+            ]
+        ]
+    },
+    {
+        "id": "f69bbf05.bdd49",
+        "type": "inject",
+        "z": "ede5c076f6168a6c",
+        "name": "enable",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "enable",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 383,
+        "y": 168,
+        "wires": [
+            [
+                "e0cb2a8c.4402a8"
+            ]
+        ]
+    },
+    {
+        "id": "143523b2.2f165c",
+        "type": "inject",
+        "z": "ede5c076f6168a6c",
+        "name": "disable",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "enable",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 383.5,
+        "y": 218,
+        "wires": [
+            [
+                "e0cb2a8c.4402a8"
+            ]
+        ]
+    },
+    {
+        "id": "5ec4239b.34e174",
+        "type": "subflow:b4973237.46ab6",
+        "z": "ede5c076f6168a6c",
+        "name": "",
+        "env": [],
+        "x": 653,
+        "y": 187,
+        "wires": [
+            [
+                "de738fc5.75e4c8",
+                "e0cb2a8c.4402a8"
+            ]
+        ]
+    },
+    {
+        "id": "de738fc5.75e4c8",
+        "type": "change",
+        "z": "ede5c076f6168a6c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pv",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 874,
+        "y": 186,
+        "wires": [
+            [
+                "9f58a52d.076dd"
+            ]
+        ]
+    },
+    {
+        "id": "e94f888a.130a88",
+        "type": "range",
+        "z": "ede5c076f6168a6c",
+        "minin": "0",
+        "maxin": "1",
+        "minout": "0",
+        "maxout": "25",
+        "action": "scale",
+        "round": false,
+        "name": "Scale power",
+        "x": 715,
+        "y": 335,
+        "wires": [
+            [
+                "f70949c8.aab988"
+            ]
+        ]
+    },
+    {
+        "id": "9f58a52d.076dd",
+        "type": "ui_chart",
+        "z": "ede5c076f6168a6c",
+        "name": "",
+        "group": "c45a83a3.d00908",
+        "order": 0,
+        "width": "6",
+        "height": "6",
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#cf0005",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 1079,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bef0a1f8.2e2cf",
+        "type": "inject",
+        "z": "ede5c076f6168a6c",
+        "name": "Clear chart on deploy",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "{\"data\":[]}",
+        "payloadType": "json",
+        "x": 640,
+        "y": 403,
+        "wires": [
+            [
+                "9079ffaf.4a096"
+            ]
+        ]
+    },
+    {
+        "id": "9079ffaf.4a096",
+        "type": "change",
+        "z": "ede5c076f6168a6c",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.data",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 876,
+        "y": 403,
+        "wires": [
+            [
+                "9f58a52d.076dd"
+            ]
+        ]
+    },
+    {
+        "id": "1719f5a5a4164309",
+        "type": "smooth",
+        "z": "4abea758808e56d0",
+        "g": "c1f9dd9005199070",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "a4eacd80d5527866",
+                "109fb15ca23f61de"
+            ]
+        ]
+    },
+    {
+        "id": "0673833916e00a97",
+        "type": "smooth",
+        "z": "4abea758808e56d0",
+        "g": "c1f9dd9005199070",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 660,
+        "y": 320,
+        "wires": [
+            [
+                "285f2a0d9577319e",
+                "d66cdba9a473ecf7"
+            ]
+        ]
+    },
+    {
+        "id": "a1296ba7044ee47f",
+        "type": "smooth",
+        "z": "4abea758808e56d0",
+        "g": "c1f9dd9005199070",
+        "name": "",
+        "property": "payload",
+        "action": "mean",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "reduce": false,
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "49a3d464b6d7bee8",
+                "35ae8f14df4e6a62"
+            ]
+        ]
+    },
+    {
+        "id": "81cb106ae918aa73",
+        "type": "comment",
+        "z": "4abea758808e56d0",
+        "g": "c1f9dd9005199070",
+        "name": "What's going on",
+        "info": "# Taking Readings\nThe scd30 sensor is probed every \"n\" seconds to find out the temperature, relative humidity, and CO2 levels.\n## Noise\nSince the values can be noisy, the values are averaged over a window of values.\n## Global variables\nGlobal variables for temperature, CO2 and humidity are then created.\n\n## Monitor\nThese values are used during monitoring to change the power switch state:\n- within range (do nothing)\n- over range (turn switch off that is attached to either the CO2 or humidifier)\n- below range (turn switch on)\n\n## Store Values\nThe variables, as well as whether the CO2 or humidifier plugs were on or off are stored in an influx database every so often.",
+        "x": 250,
+        "y": 380,
         "wires": []
     }
 ]
