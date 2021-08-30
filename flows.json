@@ -1830,7 +1830,7 @@
         "pin": "7",
         "intype": "tri",
         "debounce": "25",
-        "read": true,
+        "read": false,
         "x": 310,
         "y": 920,
         "wires": [
@@ -1932,13 +1932,13 @@
         "type": "change",
         "z": "8b70799ce97cf17d",
         "g": "ba872fe6adc0f262",
-        "name": "",
+        "name": "set global.LIGHTS_ON to false",
         "rules": [
             {
                 "t": "set",
                 "p": "LIGHTS_ON",
                 "pt": "global",
-                "to": "true",
+                "to": "false",
                 "tot": "bool"
             }
         ],
@@ -1947,7 +1947,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 850,
         "y": 880,
         "wires": [
             []
@@ -1958,7 +1958,7 @@
         "type": "change",
         "z": "8b70799ce97cf17d",
         "g": "ba872fe6adc0f262",
-        "name": "",
+        "name": "set global.LIGHTS_ON to true",
         "rules": [
             {
                 "t": "set",
@@ -1973,7 +1973,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 850,
         "y": 840,
         "wires": [
             []
@@ -1983,7 +1983,6 @@
         "id": "b01650a105e9d838",
         "type": "e-mail",
         "z": "8b70799ce97cf17d",
-        "d": true,
         "g": "ba872fe6adc0f262",
         "server": "smtp.gmail.com",
         "port": "465",
