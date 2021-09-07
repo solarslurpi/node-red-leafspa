@@ -29,7 +29,9 @@
             "5d428ac7cc9afdba"
         ],
         "x": 88,
-        "y": 233
+        "y": 233,
+        "w": 1484,
+        "h": 294
     },
     {
         "id": "3af2676ba4920b7f",
@@ -55,7 +57,9 @@
             "94aa72c68daa4225"
         ],
         "x": 14,
-        "y": 559
+        "y": 559,
+        "w": 1312,
+        "h": 202
     },
     {
         "id": "968ef5bdcf2bce96",
@@ -103,10 +107,18 @@
             "5bb9031a4d037509",
             "1471d54187b8cad2",
             "b58b16f52bf976ef",
-            "b01650a105e9d838"
+            "b01650a105e9d838",
+            "a112c1321f7394ca",
+            "6a8630aafdf67919",
+            "6c6ac30170b8c47d",
+            "dcf288668f36caa1",
+            "c9e4f1e57a4501c7",
+            "f7624c02411cec09"
         ],
         "x": 214,
-        "y": 799
+        "y": 799,
+        "w": 812,
+        "h": 382
     },
     {
         "id": "9dcaa677a0671838",
@@ -244,7 +256,9 @@
             "e90de7a5395607eb"
         ],
         "x": 114,
-        "y": 259
+        "y": 259,
+        "w": 1432,
+        "h": 242
     },
     {
         "id": "afe6788ded04e72d",
@@ -1493,7 +1507,7 @@
         "z": "8b70799ce97cf17d",
         "g": "ba872fe6adc0f262",
         "name": "Use Photoresistor to see if LED lights on or off",
-        "info": "0 = Lights are on.  1 = Lights are off.\n\n\nI am having a challenge where the LED plug is going off and I'm not getting notified.\n\nBy using a photoresistor, I have another way of knowing if the LED light is on or off.  And probably more reliable.",
+        "info": "# Switch statement values\n0 = Lights are on.  1 = Lights are off.\n# Just in case...\nTurn off the CO2 solenoid, humidifier, or pump in case they are on. None of these need to be on when the lights are off.\n# Send email\nSend an email to let me know when the lights are turned on or off.  The email gives me some piece of mind the system is working correctly.\n",
         "x": 470,
         "y": 860,
         "wires": []
@@ -1510,8 +1524,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 980,
+        "x": 490,
+        "y": 1080,
         "wires": [
             [
                 "b01650a105e9d838"
@@ -1548,7 +1562,10 @@
                 "b58b16f52bf976ef"
             ],
             [
-                "1471d54187b8cad2"
+                "1471d54187b8cad2",
+                "a112c1321f7394ca",
+                "c9e4f1e57a4501c7",
+                "6c6ac30170b8c47d"
             ]
         ]
     },
@@ -1615,8 +1632,8 @@
         "tls": true,
         "name": "happyday.mjohnson@gmail.com",
         "dname": "send email LED ON/OFF change",
-        "x": 880,
-        "y": 1040,
+        "x": 860,
+        "y": 1140,
         "wires": []
     },
     {
@@ -2959,6 +2976,135 @@
         "out": "out",
         "x": 1000,
         "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "a112c1321f7394ca",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "Turn CO2 off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 940,
+        "wires": [
+            [
+                "6a8630aafdf67919"
+            ]
+        ]
+    },
+    {
+        "id": "6a8630aafdf67919",
+        "type": "rpi-gpio out",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "CO2 pin",
+        "pin": "11",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 900,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "6c6ac30170b8c47d",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "Turn humidifier off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 980,
+        "wires": [
+            [
+                "dcf288668f36caa1"
+            ]
+        ]
+    },
+    {
+        "id": "dcf288668f36caa1",
+        "type": "rpi-gpio out",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "humidifier pin",
+        "pin": "13",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 930,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c9e4f1e57a4501c7",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "Stop pump",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 1020,
+        "wires": [
+            [
+                "f7624c02411cec09"
+            ]
+        ]
+    },
+    {
+        "id": "f7624c02411cec09",
+        "type": "rpi-gpio out",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "pump",
+        "pin": "15",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 910,
+        "y": 1020,
         "wires": []
     }
 ]
