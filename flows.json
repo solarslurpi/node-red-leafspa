@@ -236,31 +236,6 @@
         "h": 342
     },
     {
-        "id": "5d428ac7cc9afdba",
-        "type": "group",
-        "z": "8b70799ce97cf17d",
-        "g": "76681dea68e7073e",
-        "name": "",
-        "style": {
-            "fill": "#ffffff",
-            "label": true
-        },
-        "nodes": [
-            "8822dd6ccf3225b3",
-            "91a3fa3e8f89a982",
-            "7f34c2b988437de1",
-            "5225ce5babb7bee3",
-            "761452fe79ffb890",
-            "3f895add12630d1d",
-            "969c8b674bd2f6c7",
-            "e90de7a5395607eb"
-        ],
-        "x": 114,
-        "y": 259,
-        "w": 1432,
-        "h": 242
-    },
-    {
         "id": "afe6788ded04e72d",
         "type": "group",
         "z": "4abea758808e56d0",
@@ -287,6 +262,31 @@
         "y": 1359,
         "w": 962,
         "h": 262
+    },
+    {
+        "id": "5d428ac7cc9afdba",
+        "type": "group",
+        "z": "8b70799ce97cf17d",
+        "g": "76681dea68e7073e",
+        "name": "",
+        "style": {
+            "fill": "#ffffff",
+            "label": true
+        },
+        "nodes": [
+            "8822dd6ccf3225b3",
+            "91a3fa3e8f89a982",
+            "7f34c2b988437de1",
+            "5225ce5babb7bee3",
+            "761452fe79ffb890",
+            "3f895add12630d1d",
+            "969c8b674bd2f6c7",
+            "e90de7a5395607eb"
+        ],
+        "x": 114,
+        "y": 259,
+        "w": 1432,
+        "h": 242
     },
     {
         "id": "bd52ceb7e193caff",
@@ -2633,7 +2633,7 @@
         "pin": "16",
         "intype": "tri",
         "debounce": "25",
-        "read": false,
+        "read": true,
         "x": 220,
         "y": 1400,
         "wires": [
@@ -2652,7 +2652,9 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "true"
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
             }
         ],
         "checkall": "true",
@@ -2704,7 +2706,7 @@
         "pin": "18",
         "intype": "tri",
         "debounce": "25",
-        "read": false,
+        "read": true,
         "x": 210,
         "y": 1580,
         "wires": [
