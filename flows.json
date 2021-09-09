@@ -14,6 +14,28 @@
         "info": ""
     },
     {
+        "id": "7f5b70e481620d6e",
+        "type": "subflow",
+        "name": "Sensor Error Check",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": -20,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "34247234f0668477"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
         "id": "76681dea68e7073e",
         "type": "group",
         "z": "8b70799ce97cf17d",
@@ -82,11 +104,12 @@
             "12c6f960277933bb",
             "e1adadd899171f5e",
             "dda3b658556016e0",
-            "be7087c6a93db215"
+            "be7087c6a93db215",
+            "e5488b6976dd7c04"
         ],
         "x": 134,
         "y": 599,
-        "w": 1112,
+        "w": 1212,
         "h": 242
     },
     {
@@ -141,11 +164,12 @@
             "d7a7e9f0a6c51f63",
             "2467151ca8fb8c11",
             "04d93dab9d49d747",
-            "2d6dc1fd41eb0523"
+            "2d6dc1fd41eb0523",
+            "ce419125d4c127e7"
         ],
         "x": 134,
         "y": 859,
-        "w": 1112,
+        "w": 1212,
         "h": 242
     },
     {
@@ -192,11 +216,12 @@
             "421f54339678b2ae",
             "dd3f8b083243cab6",
             "5f7d5c4c5e33be7b",
-            "33ecb18d89ecf5ea"
+            "33ecb18d89ecf5ea",
+            "43659c9345caee48"
         ],
         "x": 134,
         "y": 419,
-        "w": 952,
+        "w": 1192,
         "h": 162
     },
     {
@@ -228,7 +253,8 @@
             "1719f5a5a4164309",
             "0673833916e00a97",
             "a1296ba7044ee47f",
-            "81cb106ae918aa73"
+            "81cb106ae918aa73",
+            "0afb20ee3d565630"
         ],
         "x": 134,
         "y": 59,
@@ -753,7 +779,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 310,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "2c8490d8f1428d06"
@@ -1005,7 +1031,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 630,
+        "x": 730,
         "y": 740,
         "wires": [
             [
@@ -1041,7 +1067,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 920,
         "y": 800,
         "wires": [
             [
@@ -1069,7 +1095,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 930,
         "y": 760,
         "wires": [
             [
@@ -1097,7 +1123,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 860,
+        "x": 960,
         "y": 640,
         "wires": [
             [
@@ -1118,7 +1144,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1130,
+        "x": 1230,
         "y": 700,
         "wires": []
     },
@@ -1171,7 +1197,7 @@
         "y": 680,
         "wires": [
             [
-                "12c6f960277933bb"
+                "e5488b6976dd7c04"
             ]
         ]
     },
@@ -1430,13 +1456,14 @@
         "g": "c1f9dd9005199070",
         "scd30Config": "1ea5dfa03b11893e",
         "name": "scd30",
-        "x": 390,
+        "x": 230,
         "y": 240,
         "wires": [
             [
+                "84278bf54d79cd76",
                 "73e9b65f7062e826",
                 "11e485116eee57f2",
-                "84278bf54d79cd76"
+                "0afb20ee3d565630"
             ]
         ]
     },
@@ -1652,7 +1679,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 440,
+        "x": 500,
         "y": 740,
         "wires": [
             [
@@ -1843,7 +1870,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 620,
+        "x": 720,
         "y": 1000,
         "wires": [
             [
@@ -1879,7 +1906,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
+        "x": 950,
         "y": 1060,
         "wires": [
             [
@@ -1907,7 +1934,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
+        "x": 950,
         "y": 1020,
         "wires": [
             [
@@ -1935,7 +1962,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 870,
+        "x": 970,
         "y": 900,
         "wires": [
             [
@@ -1956,7 +1983,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1130,
+        "x": 1230,
         "y": 940,
         "wires": []
     },
@@ -1981,7 +2008,7 @@
         "y": 940,
         "wires": [
             [
-                "d7a7e9f0a6c51f63"
+                "ce419125d4c127e7"
             ]
         ]
     },
@@ -2001,7 +2028,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 420,
+        "x": 500,
         "y": 1000,
         "wires": [
             [
@@ -2145,9 +2172,7 @@
         "y": 460,
         "wires": [
             [
-                "421f54339678b2ae",
-                "dd3f8b083243cab6",
-                "5f7d5c4c5e33be7b"
+                "43659c9345caee48"
             ]
         ]
     },
@@ -2164,7 +2189,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
+        "x": 1190,
         "y": 460,
         "wires": []
     },
@@ -2189,8 +2214,8 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 790,
-        "y": 500,
+        "x": 1010,
+        "y": 480,
         "wires": [
             [
                 "962ae9ccf9e5902f",
@@ -2225,7 +2250,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
+        "x": 750,
         "y": 460,
         "wires": [
             [
@@ -2260,7 +2285,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 540,
+        "x": 780,
         "y": 500,
         "wires": [
             [
@@ -2295,7 +2320,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
+        "x": 760,
         "y": 540,
         "wires": [
             [
@@ -2318,8 +2343,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 970,
-        "y": 520,
+        "x": 1210,
+        "y": 500,
         "wires": []
     },
     {
@@ -2407,7 +2432,7 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1100,
+        "x": 1200,
         "y": 760,
         "wires": []
     },
@@ -2431,7 +2456,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
+        "x": 950,
         "y": 720,
         "wires": [
             [
@@ -2450,7 +2475,7 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1130,
+        "x": 1230,
         "y": 1020,
         "wires": []
     },
@@ -2474,7 +2499,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
+        "x": 990,
         "y": 980,
         "wires": [
             [
@@ -2588,7 +2613,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 860,
+        "x": 960,
         "y": 680,
         "wires": [
             [
@@ -2616,7 +2641,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
+        "x": 980,
         "y": 940,
         "wires": [
             [
@@ -3108,5 +3133,397 @@
         "x": 910,
         "y": 1020,
         "wires": []
+    },
+    {
+        "id": "72691f837a4761e3",
+        "type": "config",
+        "z": "4abea758808e56d0",
+        "name": "State Variables",
+        "properties": [
+            {
+                "p": "sensor_working",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "active": true,
+        "x": 260,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "34247234f0668477",
+        "type": "function",
+        "z": "7f5b70e481620d6e",
+        "name": "Check if we're getting readings",
+        "func": "if (isNaN(msg.payload.co2Concentration) ){\n    msg.payload = false;\n}else {\n    msg.payload = true;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "3c657af948247c47"
+            ]
+        ]
+    },
+    {
+        "id": "3c657af948247c47",
+        "type": "switch",
+        "z": "7f5b70e481620d6e",
+        "name": "true if we are getting readings",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 80,
+        "wires": [
+            [
+                "23104b00346c1d1f",
+                "96ad718c50324646"
+            ],
+            [
+                "232789a045a98448"
+            ]
+        ]
+    },
+    {
+        "id": "23104b00346c1d1f",
+        "type": "change",
+        "z": "7f5b70e481620d6e",
+        "name": "set sensor_working to true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensor_working",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "232789a045a98448",
+        "type": "change",
+        "z": "7f5b70e481620d6e",
+        "name": "add 1 to n_bad_readings",
+        "rules": [
+            {
+                "t": "set",
+                "p": "n_bad_readings",
+                "pt": "flow",
+                "to": "$flowContext(\"n_bad_readings\")+1",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 120,
+        "wires": [
+            [
+                "7c2d03e0b4809e9e",
+                "5c0e2f583f51111c"
+            ]
+        ]
+    },
+    {
+        "id": "7c2d03e0b4809e9e",
+        "type": "switch",
+        "z": "7f5b70e481620d6e",
+        "name": "n_bad_readings > 3?",
+        "property": "n_bad_readings",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1000,
+        "y": 80,
+        "wires": [
+            [
+                "65635cb9b4bd5851",
+                "5746a4c7a8a82e23"
+            ]
+        ]
+    },
+    {
+        "id": "65635cb9b4bd5851",
+        "type": "change",
+        "z": "7f5b70e481620d6e",
+        "name": "msg = Sensor not working",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Sensor is not working!",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 80,
+        "wires": [
+            [
+                "0bbe8b5a93d701f9",
+                "932ab0db48ba4e93"
+            ]
+        ]
+    },
+    {
+        "id": "0bbe8b5a93d701f9",
+        "type": "e-mail",
+        "z": "7f5b70e481620d6e",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "tls": true,
+        "name": "happyday.mjohnson@gmail.com",
+        "dname": "send email ",
+        "x": 1490,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "932ab0db48ba4e93",
+        "type": "debug",
+        "z": "7f5b70e481620d6e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1450,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "e3f7d43cdb1cc7dc",
+        "type": "config",
+        "z": "7f5b70e481620d6e",
+        "name": "State Variables",
+        "properties": [
+            {
+                "p": "n_bad_readings",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "active": true,
+        "x": 200,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "43659c9345caee48",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "11670cc3ba018b59",
+        "name": "is sensor working?",
+        "property": "sensor_working",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "421f54339678b2ae",
+                "dd3f8b083243cab6",
+                "5f7d5c4c5e33be7b"
+            ]
+        ]
+    },
+    {
+        "id": "e5488b6976dd7c04",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "is sensor working?",
+        "property": "sensor_working",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 290,
+        "y": 740,
+        "wires": [
+            [
+                "12c6f960277933bb"
+            ]
+        ]
+    },
+    {
+        "id": "ce419125d4c127e7",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "9dcaa677a0671838",
+        "name": "is sensor working?",
+        "property": "sensor_working",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 1000,
+        "wires": [
+            [
+                "d7a7e9f0a6c51f63"
+            ]
+        ]
+    },
+    {
+        "id": "5c0e2f583f51111c",
+        "type": "function",
+        "z": "7f5b70e481620d6e",
+        "name": "print n_bad_readings",
+        "func": "msg.payload = \"number of bad readings: \" + flow.get(\"n_bad_readings\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "4408918677e3640b"
+            ]
+        ]
+    },
+    {
+        "id": "4408918677e3640b",
+        "type": "debug",
+        "z": "7f5b70e481620d6e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0afb20ee3d565630",
+        "type": "subflow:7f5b70e481620d6e",
+        "z": "4abea758808e56d0",
+        "g": "c1f9dd9005199070",
+        "name": "",
+        "x": 620,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "96ad718c50324646",
+        "type": "change",
+        "z": "7f5b70e481620d6e",
+        "name": "set n_bad_readings to 0",
+        "rules": [
+            {
+                "t": "set",
+                "p": "n_bad_readings",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5746a4c7a8a82e23",
+        "type": "change",
+        "z": "7f5b70e481620d6e",
+        "name": "set sensor_working to false",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensor_working",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 20,
+        "wires": [
+            []
+        ]
     }
 ]
