@@ -108,9 +108,7 @@
             "e5488b6976dd7c04"
         ],
         "x": 134,
-        "y": 599,
-        "w": 1212,
-        "h": 242
+        "y": 599
     },
     {
         "id": "ba872fe6adc0f262",
@@ -136,11 +134,13 @@
             "6c6ac30170b8c47d",
             "dcf288668f36caa1",
             "c9e4f1e57a4501c7",
-            "f7624c02411cec09"
+            "f7624c02411cec09",
+            "f376cb8757879fe8",
+            "ff7c8f7e46d35f16"
         ],
-        "x": 214,
-        "y": 799,
-        "w": 812,
+        "x": 234,
+        "y": 819,
+        "w": 1232,
         "h": 382
     },
     {
@@ -168,9 +168,7 @@
             "ce419125d4c127e7"
         ],
         "x": 134,
-        "y": 859,
-        "w": 1212,
-        "h": 242
+        "y": 859
     },
     {
         "id": "6c6d661cc9832c5f",
@@ -194,9 +192,7 @@
             "91f04f48495fec01"
         ],
         "x": 134,
-        "y": 1119,
-        "w": 932,
-        "h": 182
+        "y": 1119
     },
     {
         "id": "11670cc3ba018b59",
@@ -220,9 +216,7 @@
             "43659c9345caee48"
         ],
         "x": 134,
-        "y": 419,
-        "w": 1192,
-        "h": 162
+        "y": 419
     },
     {
         "id": "c1f9dd9005199070",
@@ -257,9 +251,7 @@
             "0afb20ee3d565630"
         ],
         "x": 134,
-        "y": 59,
-        "w": 1112,
-        "h": 342
+        "y": 59
     },
     {
         "id": "afe6788ded04e72d",
@@ -282,12 +274,11 @@
             "89ac534d520fba7d",
             "54890add27629a66",
             "b74d12f04a57b28b",
-            "8ee9fd560e40790f"
+            "8ee9fd560e40790f",
+            "805ac9bc1ed20ecd"
         ],
         "x": 124,
-        "y": 1359,
-        "w": 962,
-        "h": 262
+        "y": 1339
     },
     {
         "id": "5d428ac7cc9afdba",
@@ -569,6 +560,18 @@
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "01be24a515700cda",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "localhost",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/ui",
+        "instancehash": "0izj4blryeyqoha7wpo3jntdituk9kxso6fkdkfuy17m0ns2oont17mt1zqr7zk9",
+        "server": "nodered03.remote-red.com",
+        "region": "us"
     },
     {
         "id": "761452fe79ffb890",
@@ -1519,8 +1522,8 @@
         "intype": "tri",
         "debounce": "25",
         "read": false,
-        "x": 310,
-        "y": 920,
+        "x": 330,
+        "y": 940,
         "wires": [
             [
                 "2965aa8cc50c2bcd",
@@ -1534,9 +1537,9 @@
         "z": "8b70799ce97cf17d",
         "g": "ba872fe6adc0f262",
         "name": "Use Photoresistor to see if LED lights on or off",
-        "info": "# Switch statement values\n0 = Lights are on.  1 = Lights are off.\n# Just in case...\nTurn off the CO2 solenoid, humidifier, or pump in case they are on. None of these need to be on when the lights are off.\n# Send email\nSend an email to let me know when the lights are turned on or off.  The email gives me some piece of mind the system is working correctly.\n",
-        "x": 470,
-        "y": 860,
+        "info": "# Switch statement values\n0 = Lights are on.  1 = Lights are off.\n# When Lights turn on\nUse a countdown timer to wait 30 minutes before supplementing CO2 and humidity. This delay is based on reading the plant does not use CO2 in the first 30 minutes.  I decided to start all supplemental environmental factors after 30 minutes based on the CO2 information.  At least it is a way to conserve on the amount of CO2 used.\n# When Lights turn off\nJust in case...\nTurn off the CO2 solenoid, humidifier, or pump in case they are on. None of these need to be on when the lights are off.\n# Send email\nSend an email to let me know when the lights are turned on or off.  The email gives me some piece of mind the system is working correctly.\n",
+        "x": 490,
+        "y": 880,
         "wires": []
     },
     {
@@ -1551,8 +1554,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 1080,
+        "x": 510,
+        "y": 1100,
         "wires": [
             [
                 "b01650a105e9d838"
@@ -1582,11 +1585,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 540,
-        "y": 920,
+        "x": 560,
+        "y": 940,
         "wires": [
             [
-                "b58b16f52bf976ef"
+                "f376cb8757879fe8"
             ],
             [
                 "1471d54187b8cad2",
@@ -1616,8 +1619,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
-        "y": 880,
+        "x": 870,
+        "y": 900,
         "wires": [
             []
         ]
@@ -1642,8 +1645,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
-        "y": 840,
+        "x": 1310,
+        "y": 860,
         "wires": [
             []
         ]
@@ -1659,8 +1662,8 @@
         "tls": true,
         "name": "happyday.mjohnson@gmail.com",
         "dname": "send email LED ON/OFF change",
-        "x": 860,
-        "y": 1140,
+        "x": 880,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2819,7 +2822,8 @@
         "y": 1440,
         "wires": [
             [
-                "8ee9fd560e40790f"
+                "8ee9fd560e40790f",
+                "805ac9bc1ed20ecd"
             ]
         ]
     },
@@ -2847,7 +2851,8 @@
         "y": 1540,
         "wires": [
             [
-                "8ee9fd560e40790f"
+                "8ee9fd560e40790f",
+                "805ac9bc1ed20ecd"
             ]
         ]
     },
@@ -3025,8 +3030,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
-        "y": 940,
+        "x": 750,
+        "y": 960,
         "wires": [
             [
                 "6a8630aafdf67919"
@@ -3044,8 +3049,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 900,
-        "y": 940,
+        "x": 920,
+        "y": 960,
         "wires": []
     },
     {
@@ -3068,8 +3073,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 750,
-        "y": 980,
+        "x": 770,
+        "y": 1000,
         "wires": [
             [
                 "dcf288668f36caa1"
@@ -3087,8 +3092,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 930,
-        "y": 980,
+        "x": 950,
+        "y": 1000,
         "wires": []
     },
     {
@@ -3111,8 +3116,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
-        "y": 1020,
+        "x": 750,
+        "y": 1040,
         "wires": [
             [
                 "f7624c02411cec09"
@@ -3130,8 +3135,8 @@
         "level": "0",
         "freq": "",
         "out": "out",
-        "x": 910,
-        "y": 1020,
+        "x": 930,
+        "y": 1040,
         "wires": []
     },
     {
@@ -3524,6 +3529,88 @@
         "y": 20,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "b35b36d37672e974",
+        "type": "remote-access",
+        "z": "8b70799ce97cf17d",
+        "confignode": "01be24a515700cda",
+        "name": "Node-Red access",
+        "verbose": true,
+        "x": 760,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "805ac9bc1ed20ecd",
+        "type": "influxdb out",
+        "z": "4abea758808e56d0",
+        "g": "afe6788ded04e72d",
+        "influxdb": "bd52ceb7e193caff",
+        "name": "write pump events",
+        "measurement": "pump_events",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 970,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "f376cb8757879fe8",
+        "type": "countdown",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "start counting",
+        "topic": "start counting",
+        "payloadTimerStart": "true",
+        "payloadTimerStartType": "bool",
+        "payloadTimerStop": "false",
+        "payloadTimerStopType": "bool",
+        "timer": "1800",
+        "resetWhileRunning": false,
+        "setTimeToNewWhileRunning": true,
+        "startCountdownOnControlMessage": false,
+        "x": 800,
+        "y": 860,
+        "wires": [
+            [
+                "ff7c8f7e46d35f16"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ff7c8f7e46d35f16",
+        "type": "switch",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "is countdown done?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1040,
+        "y": 860,
+        "wires": [
+            [
+                "b58b16f52bf976ef"
+            ]
         ]
     }
 ]
