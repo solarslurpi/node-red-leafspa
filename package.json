@@ -2,7 +2,16 @@
     "name": "Leafspa",
     "description": "manage the environment variables within an indoor grow tent.",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-node-smooth": "0.1.2",
+        "node-red-node-pi-gpio": "1.2.3",
+        "node-red-contrib-config": "1.2.1",
+        "node-red-contrib-influxdb": "0.6.1",
+        "node-red-contrib-remote": "1.2.3",
+        "node-red-contrib-scd30": "1.0.1",
+        "node-red-dashboard": "3.0.4",
+        "node-red-node-email": "1.12.3"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
