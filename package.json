@@ -1,6 +1,6 @@
 {
     "name": "Leafspa",
-    "description": "manage the environment variable of indoor plant growing.",
+    "description": "manage the environment variables within an indoor grow tent.",
     "version": "0.0.1",
     "dependencies": {},
     "node-red": {

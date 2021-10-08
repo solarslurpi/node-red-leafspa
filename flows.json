@@ -50,54 +50,6 @@
         "color": "#DDAA99"
     },
     {
-        "id": "76681dea68e7073e",
-        "type": "group",
-        "z": "8b70799ce97cf17d",
-        "name": "Map Grow Day to Growing Stage",
-        "style": {
-            "stroke": "#ffC000",
-            "fill": "#ffefbf",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "91b08df24e304a1f",
-            "5d428ac7cc9afdba"
-        ],
-        "x": 88,
-        "y": 233,
-        "w": 1484,
-        "h": 294
-    },
-    {
-        "id": "3af2676ba4920b7f",
-        "type": "group",
-        "z": "8b70799ce97cf17d",
-        "name": "Set humidity setpoint",
-        "style": {
-            "stroke": "#777777",
-            "fill": "#ffffff",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "0c10701c124d9652",
-            "edb5d202c65055ae",
-            "283564a90c3644bd",
-            "2270e22d655962ab",
-            "63da71d4c7af9093",
-            "31c15103344bd46d",
-            "4ec71986b323618c",
-            "a30d46a3add1ea11",
-            "22ee6de07ad111f0",
-            "94aa72c68daa4225"
-        ],
-        "x": 14,
-        "y": 559,
-        "w": 1312,
-        "h": 202
-    },
-    {
         "id": "968ef5bdcf2bce96",
         "type": "group",
         "z": "4abea758808e56d0",
@@ -119,11 +71,12 @@
             "e1adadd899171f5e",
             "dda3b658556016e0",
             "be7087c6a93db215",
-            "e5488b6976dd7c04"
+            "e5488b6976dd7c04",
+            "691a9e59a263e084"
         ],
         "x": 134,
         "y": 799,
-        "w": 1212,
+        "w": 1372,
         "h": 242
     },
     {
@@ -153,12 +106,15 @@
             "9f98a1ce0fe07b3e",
             "ca2dd1046dede78b",
             "b58b16f52bf976ef",
-            "44eb4d7df54d1880"
+            "44eb4d7df54d1880",
+            "75250e59829d03b9",
+            "1dacee984a866e2b",
+            "68090ff36fa57771"
         ],
-        "x": 14,
-        "y": 799,
-        "w": 1092,
-        "h": 422
+        "x": 54,
+        "y": 199,
+        "w": 1352,
+        "h": 342
     },
     {
         "id": "9dcaa677a0671838",
@@ -185,11 +141,12 @@
             "ce419125d4c127e7",
             "2574d57fcafe6b0e",
             "02f1c501a3b23eb8",
-            "62df9bdc4e1e0168"
+            "62df9bdc4e1e0168",
+            "8f979df0be509094"
         ],
         "x": 134,
         "y": 1059,
-        "w": 1272,
+        "w": 1412,
         "h": 242
     },
     {
@@ -309,7 +266,7 @@
         ],
         "x": 124,
         "y": 1539,
-        "w": 1012,
+        "w": 1022,
         "h": 282
     },
     {
@@ -357,37 +314,43 @@
             "3e873a2e43dd6886",
             "12607c4eea7517c5",
             "07728359ffb6cb8c",
-            "741eb90c1f6ec67f"
+            "741eb90c1f6ec67f",
+            "08432c4ae4642529"
         ],
         "x": 134,
         "y": 1839,
-        "w": 1452,
+        "w": 1492,
         "h": 182
     },
     {
-        "id": "5d428ac7cc9afdba",
+        "id": "c46e0f1aa3ade45f",
         "type": "group",
         "z": "8b70799ce97cf17d",
-        "g": "76681dea68e7073e",
-        "name": "",
+        "name": "Turn maintanence mode ON or OFF",
         "style": {
-            "fill": "#ffffff",
-            "label": true
+            "stroke": "#6f2fa0",
+            "fill": "#dbcbe7",
+            "label": true,
+            "color": "#000000"
         },
         "nodes": [
-            "8822dd6ccf3225b3",
-            "91a3fa3e8f89a982",
-            "7f34c2b988437de1",
-            "5225ce5babb7bee3",
-            "761452fe79ffb890",
-            "3f895add12630d1d",
-            "969c8b674bd2f6c7",
-            "e90de7a5395607eb"
+            "fd8fe70cf071e64e",
+            "dc67024c11b7ddc3",
+            "0816a5ae88264cbf",
+            "54fb67ba0ef3287b",
+            "95cd08fdc45a781f",
+            "e7eb39dee445d94c",
+            "917cb0c3bbbf7e80",
+            "e7c53c6aa8f7bf22",
+            "9e00cd6775f7eee4",
+            "73e0adc899da21c8",
+            "f3424efddcaac61d",
+            "e65101b0861003d7"
         ],
-        "x": 114,
-        "y": 259,
-        "w": 1432,
-        "h": 242
+        "x": 64,
+        "y": 779,
+        "w": 1192,
+        "h": 222
     },
     {
         "id": "bd52ceb7e193caff",
@@ -658,193 +621,6 @@
         "region": "us"
     },
     {
-        "id": "761452fe79ffb890",
-        "type": "debug",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1430,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "3f895add12630d1d",
-        "type": "switch",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "depending on # grow days so far",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "btwn",
-                "v": "1",
-                "vt": "num",
-                "v2": "13",
-                "v2t": "num"
-            },
-            {
-                "t": "btwn",
-                "v": "14",
-                "vt": "num",
-                "v2": "33",
-                "v2t": "num"
-            },
-            {
-                "t": "gt",
-                "v": "33",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 570,
-        "y": 340,
-        "wires": [
-            [
-                "91a3fa3e8f89a982"
-            ],
-            [
-                "7f34c2b988437de1"
-            ],
-            [
-                "5225ce5babb7bee3"
-            ]
-        ]
-    },
-    {
-        "id": "91a3fa3e8f89a982",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "set grow_stage to seedling",
-        "rules": [
-            {
-                "t": "set",
-                "p": "grow_stage",
-                "pt": "global",
-                "to": "seedling",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 880,
-        "y": 320,
-        "wires": [
-            [
-                "8822dd6ccf3225b3"
-            ]
-        ]
-    },
-    {
-        "id": "7f34c2b988437de1",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "set grow stage to veg",
-        "rules": [
-            {
-                "t": "set",
-                "p": "grow_stage",
-                "pt": "global",
-                "to": "veg",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 900,
-        "y": 400,
-        "wires": [
-            [
-                "8822dd6ccf3225b3"
-            ]
-        ]
-    },
-    {
-        "id": "5225ce5babb7bee3",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "set grow stage to flower",
-        "rules": [
-            {
-                "t": "set",
-                "p": "grow_stage",
-                "pt": "global",
-                "to": "flower",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 910,
-        "y": 460,
-        "wires": [
-            [
-                "8822dd6ccf3225b3"
-            ]
-        ]
-    },
-    {
-        "id": "8822dd6ccf3225b3",
-        "type": "function",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "set payload to grow_stage",
-        "func": "msg.payload = global.get(\"grow_stage\")\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1220,
-        "y": 400,
-        "wires": [
-            [
-                "761452fe79ffb890"
-            ]
-        ]
-    },
-    {
-        "id": "969c8b674bd2f6c7",
-        "type": "function",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "convert to int",
-        "func": "global.set(\"grow_stage\",parseInt(global.get(\"grow_stage\")))\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 330,
-        "y": 340,
-        "wires": [
-            [
-                "3f895add12630d1d"
-            ]
-        ]
-    },
-    {
         "id": "dfcd0478bf2416e5",
         "type": "inject",
         "z": "4abea758808e56d0",
@@ -889,17 +665,6 @@
         "statusType": "auto",
         "x": 1130,
         "y": 140,
-        "wires": []
-    },
-    {
-        "id": "91b08df24e304a1f",
-        "type": "comment",
-        "z": "8b70799ce97cf17d",
-        "g": "76681dea68e7073e",
-        "name": "How I map grow day to grow stage",
-        "info": "When the seed's tap root or clone is placed in soil and the LED is on for the first time, that is day one.\n\nI've divided the growing stages into:\n- seedling\n- vegetative\n- flowering\n\nThe number of days for each was set based on the [FLU-CultivationGuide_Cannabis_WEB_PROOF_01-2020.pdf](https://github.com/solarslurpi/LeafSpaV2/blob/main/docs/FLU-CultivationGuide_Cannabis_WEB_PROOF_01-2020.pdf)\n",
-        "x": 260,
-        "y": 420,
         "wires": []
     },
     {
@@ -1118,8 +883,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 730,
-        "y": 940,
+        "x": 890,
+        "y": 900,
         "wires": [
             [
                 "2c22ddd44c08a475"
@@ -1154,7 +919,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 920,
+        "x": 1140,
         "y": 1000,
         "wires": [
             [
@@ -1182,7 +947,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
+        "x": 1150,
         "y": 960,
         "wires": [
             [
@@ -1210,7 +975,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
+        "x": 1180,
         "y": 840,
         "wires": [
             [
@@ -1231,8 +996,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1230,
-        "y": 900,
+        "x": 1390,
+        "y": 880,
         "wires": []
     },
     {
@@ -1281,11 +1046,10 @@
         "topic": "",
         "payloadType": "date",
         "x": 320,
-        "y": 880,
+        "y": 860,
         "wires": [
             [
-                "e5488b6976dd7c04",
-                "dda3b658556016e0"
+                "691a9e59a263e084"
             ]
         ]
     },
@@ -1297,244 +1061,6 @@
         "info": "- doing a `uname -a` on the pi zerow shows the chip to be Armv6 and not Armv7.  This is unfortunate because the \"normal\" Grafana install wants armv7.\n\nI found a website that gave directions for installing Grafana on a pi zero:\n- [Grafana and InfluxDB on a Pi](https://brettbeeson.com.au/grafana-and-influxdb-in-pi-zero-w/)\n- \nAfter install, I did a `sudo apt-get update` and then started the `grafana-server`.\n\nThere are several pages on nodered/tp-link with different commands.  It seems the command set used by this install is at:\n- [tplink github with commands](https://github.com/caseyjhol/node-red-contrib-tplink)",
         "x": 520,
         "y": 100,
-        "wires": []
-    },
-    {
-        "id": "edb5d202c65055ae",
-        "type": "switch",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "seedling?",
-        "property": "grow_stage",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "seedling",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 500,
-        "y": 600,
-        "wires": [
-            [
-                "2270e22d655962ab"
-            ]
-        ]
-    },
-    {
-        "id": "283564a90c3644bd",
-        "type": "inject",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "Set humidity setpoint based on grow stage",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 230,
-        "y": 660,
-        "wires": [
-            [
-                "edb5d202c65055ae",
-                "63da71d4c7af9093",
-                "4ec71986b323618c"
-            ]
-        ]
-    },
-    {
-        "id": "2270e22d655962ab",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "set humidity setpoint to seedling's",
-        "rules": [
-            {
-                "t": "set",
-                "p": "humidity_setpoint",
-                "pt": "global",
-                "to": "humidity_seedling",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 760,
-        "y": 600,
-        "wires": [
-            [
-                "22ee6de07ad111f0"
-            ]
-        ]
-    },
-    {
-        "id": "63da71d4c7af9093",
-        "type": "switch",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "veg?",
-        "property": "grow_stage",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "veg",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 490,
-        "y": 660,
-        "wires": [
-            [
-                "31c15103344bd46d"
-            ]
-        ]
-    },
-    {
-        "id": "31c15103344bd46d",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "set humidity setpoint to veg's",
-        "rules": [
-            {
-                "t": "set",
-                "p": "humidity_setpoint",
-                "pt": "global",
-                "to": "humidity_veg",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 740,
-        "y": 660,
-        "wires": [
-            [
-                "22ee6de07ad111f0"
-            ]
-        ]
-    },
-    {
-        "id": "4ec71986b323618c",
-        "type": "switch",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "flowering?",
-        "property": "grow_stage",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "flower",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 510,
-        "y": 720,
-        "wires": [
-            [
-                "a30d46a3add1ea11"
-            ]
-        ]
-    },
-    {
-        "id": "a30d46a3add1ea11",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "set humidity setpoint to flower's",
-        "rules": [
-            {
-                "t": "set",
-                "p": "humidity_setpoint",
-                "pt": "global",
-                "to": "humidity_flower",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 720,
-        "wires": [
-            [
-                "22ee6de07ad111f0"
-            ]
-        ]
-    },
-    {
-        "id": "22ee6de07ad111f0",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "humidity_setpoint",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1020,
-        "y": 660,
-        "wires": [
-            [
-                "94aa72c68daa4225"
-            ]
-        ]
-    },
-    {
-        "id": "94aa72c68daa4225",
-        "type": "debug",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1210,
-        "y": 660,
         "wires": []
     },
     {
@@ -1561,41 +1087,17 @@
         "type": "config",
         "z": "8b70799ce97cf17d",
         "name": "start parameters",
-        "properties": [],
-        "active": true,
-        "x": 240,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "0c10701c124d9652",
-        "type": "config",
-        "z": "8b70799ce97cf17d",
-        "g": "3af2676ba4920b7f",
-        "name": "humidity params",
         "properties": [
             {
-                "p": "humidity_seedling",
+                "p": "maintanence",
                 "pt": "global",
-                "to": "70",
-                "tot": "num"
-            },
-            {
-                "p": "humidity_veg",
-                "pt": "global",
-                "to": "60",
-                "tot": "num"
-            },
-            {
-                "p": "humidity_flower",
-                "pt": "global",
-                "to": "45",
-                "tot": "num"
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "active": true,
-        "x": 140,
-        "y": 600,
+        "x": 240,
+        "y": 140,
         "wires": []
     },
     {
@@ -1608,12 +1110,11 @@
         "intype": "tri",
         "debounce": "25",
         "read": false,
-        "x": 110,
-        "y": 960,
+        "x": 150,
+        "y": 320,
         "wires": [
             [
-                "2965aa8cc50c2bcd",
-                "5bb9031a4d037509"
+                "68090ff36fa57771"
             ]
         ]
     },
@@ -1624,8 +1125,8 @@
         "g": "ba872fe6adc0f262",
         "name": "Use Photoresistor to see if LED lights on or off",
         "info": "# Switch statement values\n0 = Lights are on.  1 = Lights are off.\n# When Lights turn on\nUse a delay to wait 30 minutes before supplementing CO2 and humidity. This delay is based on reading the plant does not use CO2 in the first 30 minutes.  I decided to start all supplemental environmental factors after 30 minutes based on the CO2 information.  At least it is a way to conserve on the amount of CO2 used.\n# When Lights turn off\nJust in case...\nTurn off the CO2 solenoid, humidifier, or pump in case they are on. None of these need to be on when the lights are off.\n# Send email\nSend an email to let me know when the lights are turned on or off.  The email gives me some piece of mind the system is working correctly.\n",
-        "x": 270,
-        "y": 900,
+        "x": 310,
+        "y": 260,
         "wires": []
     },
     {
@@ -1640,8 +1141,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 1120,
+        "x": 410,
+        "y": 500,
         "wires": [
             [
                 "b01650a105e9d838"
@@ -1671,8 +1172,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 340,
-        "y": 960,
+        "x": 580,
+        "y": 300,
         "wires": [
             [
                 "2b135d6da4c867f9",
@@ -1681,7 +1182,8 @@
             [
                 "c9e4f1e57a4501c7",
                 "ca2dd1046dede78b",
-                "44eb4d7df54d1880"
+                "44eb4d7df54d1880",
+                "75250e59829d03b9"
             ]
         ]
     },
@@ -1696,8 +1198,8 @@
         "tls": true,
         "name": "happyday.mjohnson@gmail.com",
         "dname": "send email LED ON/OFF change",
-        "x": 660,
-        "y": 1180,
+        "x": 860,
+        "y": 500,
         "wires": []
     },
     {
@@ -1716,34 +1218,13 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 510,
-        "y": 940,
+        "x": 690,
+        "y": 920,
         "wires": [
             [
                 "cf0e0aef5fbb50e9"
             ]
         ]
-    },
-    {
-        "id": "e90de7a5395607eb",
-        "type": "comment",
-        "z": "8b70799ce97cf17d",
-        "g": "5d428ac7cc9afdba",
-        "name": "Not Using",
-        "info": "",
-        "x": 200,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "2f4da29c567209de",
-        "type": "comment",
-        "z": "8b70799ce97cf17d",
-        "name": "Not Using",
-        "info": "",
-        "x": 300,
-        "y": 600,
-        "wires": []
     },
     {
         "id": "a4eacd80d5527866",
@@ -1888,26 +1369,26 @@
         "rules": [
             {
                 "t": "btwn",
-                "v": ".8",
+                "v": "1",
                 "vt": "num",
-                "v2": "1.1",
+                "v2": "1.5",
                 "v2t": "num"
             },
             {
                 "t": "lt",
-                "v": ".8",
+                "v": "1",
                 "vt": "num"
             },
             {
                 "t": "gt",
-                "v": "1.1",
+                "v": "1.5",
                 "vt": "num"
             }
         ],
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 750,
+        "x": 980,
         "y": 1200,
         "wires": [
             [
@@ -1943,7 +1424,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
+        "x": 1230,
         "y": 1260,
         "wires": [
             [
@@ -1971,7 +1452,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
+        "x": 1230,
         "y": 1220,
         "wires": [
             [
@@ -1999,7 +1480,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1030,
+        "x": 1210,
         "y": 1100,
         "wires": [
             [
@@ -2020,7 +1501,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
+        "x": 1410,
         "y": 1140,
         "wires": []
     },
@@ -2045,8 +1526,7 @@
         "y": 1140,
         "wires": [
             [
-                "ce419125d4c127e7",
-                "62df9bdc4e1e0168"
+                "ce419125d4c127e7"
             ]
         ]
     },
@@ -2066,7 +1546,7 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 480,
+        "x": 780,
         "y": 1200,
         "wires": [
             [
@@ -2470,8 +1950,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1200,
-        "y": 960,
+        "x": 1400,
+        "y": 940,
         "wires": []
     },
     {
@@ -2494,7 +1974,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
+        "x": 1170,
         "y": 920,
         "wires": [
             [
@@ -2513,7 +1993,7 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1310,
+        "x": 1450,
         "y": 1200,
         "wires": []
     },
@@ -2537,7 +2017,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1050,
+        "x": 1230,
         "y": 1180,
         "wires": [
             [
@@ -2651,7 +2131,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
+        "x": 1180,
         "y": 880,
         "wires": [
             [
@@ -2679,7 +2159,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
+        "x": 1220,
         "y": 1140,
         "wires": [
             [
@@ -2929,8 +2409,8 @@
         "topic": "",
         "payload": "1",
         "payloadType": "num",
-        "x": 250,
-        "y": 2220,
+        "x": 230,
+        "y": 2660,
         "wires": [
             [
                 "9f3f59f024e3d4b4"
@@ -2958,8 +2438,8 @@
         "topic": "",
         "payload": "0",
         "payloadType": "num",
-        "x": 240,
-        "y": 2280,
+        "x": 220,
+        "y": 2720,
         "wires": [
             [
                 "9f3f59f024e3d4b4"
@@ -2976,8 +2456,8 @@
         "level": "0",
         "freq": "",
         "out": "out",
-        "x": 480,
-        "y": 2300,
+        "x": 460,
+        "y": 2740,
         "wires": []
     },
     {
@@ -2989,8 +2469,8 @@
         "intype": "tri",
         "debounce": "25",
         "read": false,
-        "x": 230,
-        "y": 2340,
+        "x": 210,
+        "y": 2780,
         "wires": [
             [
                 "766ff78eaf28c1f7"
@@ -3006,8 +2486,8 @@
         "intype": "tri",
         "debounce": "25",
         "read": false,
-        "x": 250,
-        "y": 2400,
+        "x": 230,
+        "y": 2840,
         "wires": [
             [
                 "766ff78eaf28c1f7"
@@ -3026,8 +2506,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 420,
-        "y": 2360,
+        "x": 400,
+        "y": 2800,
         "wires": []
     },
     {
@@ -3065,8 +2545,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 960,
+        "x": 1070,
+        "y": 320,
         "wires": [
             [
                 "6a8630aafdf67919"
@@ -3084,8 +2564,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 920,
-        "y": 960,
+        "x": 1220,
+        "y": 320,
         "wires": []
     },
     {
@@ -3108,8 +2588,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
-        "y": 1000,
+        "x": 1130,
+        "y": 360,
         "wires": [
             [
                 "dcf288668f36caa1"
@@ -3127,8 +2607,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1010,
-        "y": 1000,
+        "x": 1310,
+        "y": 360,
         "wires": []
     },
     {
@@ -3136,7 +2616,7 @@
         "type": "change",
         "z": "8b70799ce97cf17d",
         "g": "ba872fe6adc0f262",
-        "name": "Stop pump",
+        "name": "Stop humidifier pump",
         "rules": [
             {
                 "t": "set",
@@ -3151,8 +2631,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 530,
-        "y": 1060,
+        "x": 900,
+        "y": 400,
         "wires": [
             [
                 "f7624c02411cec09"
@@ -3164,14 +2644,14 @@
         "type": "rpi-gpio out",
         "z": "8b70799ce97cf17d",
         "g": "ba872fe6adc0f262",
-        "name": "pump",
+        "name": "humidifier pump",
         "pin": "15",
         "set": "",
         "level": "0",
         "freq": "",
         "out": "out",
-        "x": 710,
-        "y": 1060,
+        "x": 1100,
+        "y": 400,
         "wires": []
     },
     {
@@ -3184,6 +2664,12 @@
                 "p": "sensor_working",
                 "pt": "global",
                 "to": "true",
+                "tot": "bool"
+            },
+            {
+                "p": "maintenance",
+                "pt": "global",
+                "to": "false",
                 "tot": "bool"
             }
         ],
@@ -3442,8 +2928,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 290,
-        "y": 940,
+        "x": 490,
+        "y": 920,
         "wires": [
             [
                 "12c6f960277933bb"
@@ -3466,11 +2952,12 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 270,
+        "x": 290,
         "y": 1200,
         "wires": [
             [
-                "d7a7e9f0a6c51f63"
+                "62df9bdc4e1e0168",
+                "8f979df0be509094"
             ]
         ]
     },
@@ -3576,8 +3063,8 @@
         "confignode": "01be24a515700cda",
         "name": "Node-Red access",
         "verbose": true,
-        "x": 760,
-        "y": 1280,
+        "x": 670,
+        "y": 580,
         "wires": [
             []
         ]
@@ -3588,7 +3075,7 @@
         "z": "4abea758808e56d0",
         "g": "afe6788ded04e72d",
         "influxdb": "bd52ceb7e193caff",
-        "name": "write pump events",
+        "name": "write humidifier pump events",
         "measurement": "pump_events",
         "precision": "",
         "retentionPolicy": "",
@@ -3597,7 +3084,7 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 970,
+        "x": 1000,
         "y": 1580,
         "wires": []
     },
@@ -3618,8 +3105,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "allowrate": false,
-        "x": 620,
-        "y": 880,
+        "x": 890,
+        "y": 280,
         "wires": [
             [
                 "b58b16f52bf976ef"
@@ -3637,8 +3124,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 630,
-        "y": 2620,
+        "x": 610,
+        "y": 3060,
         "wires": [
             [
                 "0d71a6f8205b4144"
@@ -3666,8 +3153,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 470,
-        "y": 2640,
+        "x": 450,
+        "y": 3080,
         "wires": [
             [
                 "fe7c583743d4b331"
@@ -3686,8 +3173,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 860,
-        "y": 2640,
+        "x": 840,
+        "y": 3080,
         "wires": []
     },
     {
@@ -3710,8 +3197,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 840,
+        "x": 930,
+        "y": 240,
         "wires": [
             []
         ]
@@ -3736,8 +3223,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
-        "y": 960,
+        "x": 880,
+        "y": 320,
         "wires": [
             [
                 "a112c1321f7394ca"
@@ -3764,8 +3251,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 840,
-        "y": 880,
+        "x": 1120,
+        "y": 280,
         "wires": [
             []
         ]
@@ -3790,8 +3277,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
-        "y": 1000,
+        "x": 900,
+        "y": 360,
         "wires": [
             [
                 "6c6ac30170b8c47d"
@@ -3846,7 +3333,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
+        "x": 970,
         "y": 1140,
         "wires": []
     },
@@ -3888,7 +3375,7 @@
         ],
         "outputs": 1,
         "useDifferentColor": false,
-        "x": 770,
+        "x": 970,
         "y": 1100,
         "wires": [
             []
@@ -3906,7 +3393,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
+        "x": 800,
         "y": 1140,
         "wires": [
             [
@@ -4407,7 +3894,8 @@
         "y": 1920,
         "wires": [
             [
-                "3e873a2e43dd6886"
+                "3e873a2e43dd6886",
+                "08432c4ae4642529"
             ]
         ]
     },
@@ -4430,11 +3918,18 @@
         "id": "2b80914edaddf792",
         "type": "change",
         "z": "8b70799ce97cf17d",
-        "name": "",
+        "name": "set CO2_ON and HUMIDITY_ON to TRUE",
         "rules": [
             {
                 "t": "set",
                 "p": "CO2_ON",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "HUMIDITY_ON",
                 "pt": "global",
                 "to": "true",
                 "tot": "bool"
@@ -4445,8 +3940,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 1420,
+        "x": 770,
+        "y": 640,
         "wires": [
             []
         ]
@@ -4472,8 +3967,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 390,
-        "y": 1440,
+        "x": 460,
+        "y": 640,
         "wires": [
             [
                 "2b80914edaddf792"
@@ -4557,8 +4052,8 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 600,
-        "y": 2120,
+        "x": 580,
+        "y": 2560,
         "wires": [
             [
                 "a82a9f57ad979948"
@@ -4588,8 +4083,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 380,
-        "y": 2120,
+        "x": 360,
+        "y": 2560,
         "wires": [
             [
                 "b3071ab98a022411"
@@ -4608,8 +4103,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1370,
-        "y": 2100,
+        "x": 1350,
+        "y": 2540,
         "wires": []
     },
     {
@@ -4623,8 +4118,8 @@
         "round": "0",
         "mult": "single",
         "reduce": false,
-        "x": 1150,
-        "y": 2100,
+        "x": 1130,
+        "y": 2540,
         "wires": [
             [
                 "d09ed7509995008a",
@@ -4647,8 +4142,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 970,
-        "y": 2100,
+        "x": 950,
+        "y": 2540,
         "wires": [
             [
                 "cec1fe3ff77e6332"
@@ -4666,8 +4161,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 2100,
+        "x": 800,
+        "y": 2540,
         "wires": [
             [
                 "1e4a1fbc26ca9aec"
@@ -4688,8 +4183,8 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 1390,
-        "y": 2160,
+        "x": 1370,
+        "y": 2600,
         "wires": []
     },
     {
@@ -4709,35 +4204,6 @@
         "x": 590,
         "y": 120,
         "wires": []
-    },
-    {
-        "id": "352a3ec84095836e",
-        "type": "inject",
-        "z": "4abea758808e56d0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 690,
-        "y": 1320,
-        "wires": [
-            [
-                "c2208a090b9adff5"
-            ]
-        ]
     },
     {
         "id": "93ca8f7778e3b6e7",
@@ -4847,5 +4313,535 @@
                 "65635cb9b4bd5851"
             ]
         ]
+    },
+    {
+        "id": "691a9e59a263e084",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "968ef5bdcf2bce96",
+        "name": "not in maintanence?",
+        "property": "maintanence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 920,
+        "wires": [
+            [
+                "e5488b6976dd7c04"
+            ]
+        ]
+    },
+    {
+        "id": "8f979df0be509094",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "9dcaa677a0671838",
+        "name": "not in maintanence?",
+        "property": "maintanence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 1200,
+        "wires": [
+            [
+                "d7a7e9f0a6c51f63"
+            ]
+        ]
+    },
+    {
+        "id": "1dacee984a866e2b",
+        "type": "rpi-gpio out",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "irrigation pump",
+        "pin": "22",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 1140,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "75250e59829d03b9",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "stop irrigation pump",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 440,
+        "wires": [
+            [
+                "1dacee984a866e2b"
+            ]
+        ]
+    },
+    {
+        "id": "68090ff36fa57771",
+        "type": "switch",
+        "z": "8b70799ce97cf17d",
+        "g": "ba872fe6adc0f262",
+        "name": "Not in maintanence?",
+        "property": "maintanence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "5bb9031a4d037509",
+                "2965aa8cc50c2bcd"
+            ]
+        ]
+    },
+    {
+        "id": "08432c4ae4642529",
+        "type": "influxdb out",
+        "z": "4abea758808e56d0",
+        "g": "5cd41cd596d96214",
+        "influxdb": "bd52ceb7e193caff",
+        "name": "write irrigation pump events",
+        "measurement": "irrigation_pump_events",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1480,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "fefc9e29f4c30c81",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "name": "global.maintanence is FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "maintanence",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "maintanence is FALSE",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 720,
+        "wires": [
+            [
+                "5278d77885b0adfd"
+            ]
+        ]
+    },
+    {
+        "id": "556fa2d55ba86663",
+        "type": "inject",
+        "z": "8b70799ce97cf17d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "fefc9e29f4c30c81"
+            ]
+        ]
+    },
+    {
+        "id": "5278d77885b0adfd",
+        "type": "debug",
+        "z": "8b70799ce97cf17d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "fd8fe70cf071e64e",
+        "type": "inject",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "maintanence ON",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 200,
+        "y": 840,
+        "wires": [
+            [
+                "0816a5ae88264cbf"
+            ]
+        ]
+    },
+    {
+        "id": "dc67024c11b7ddc3",
+        "type": "inject",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "maintanence OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 200,
+        "y": 920,
+        "wires": [
+            [
+                "0816a5ae88264cbf"
+            ]
+        ]
+    },
+    {
+        "id": "0816a5ae88264cbf",
+        "type": "switch",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 390,
+        "y": 880,
+        "wires": [
+            [
+                "54fb67ba0ef3287b"
+            ],
+            [
+                "95cd08fdc45a781f"
+            ]
+        ]
+    },
+    {
+        "id": "54fb67ba0ef3287b",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "maintanence is TRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "maintanence",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "maintanence is TRUE",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 860,
+        "wires": [
+            [
+                "e7eb39dee445d94c",
+                "e7c53c6aa8f7bf22",
+                "73e0adc899da21c8",
+                "e65101b0861003d7"
+            ]
+        ]
+    },
+    {
+        "id": "95cd08fdc45a781f",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "maintanence is FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "maintanence",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Maintanence is False",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 920,
+        "wires": [
+            [
+                "e65101b0861003d7"
+            ]
+        ]
+    },
+    {
+        "id": "e7eb39dee445d94c",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "Turn CO2 OFF",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 820,
+        "wires": [
+            [
+                "917cb0c3bbbf7e80"
+            ]
+        ]
+    },
+    {
+        "id": "917cb0c3bbbf7e80",
+        "type": "rpi-gpio out",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "CO2 pin",
+        "pin": "11",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 1150,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "e7c53c6aa8f7bf22",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "Turn humidifier off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 900,
+        "y": 860,
+        "wires": [
+            [
+                "9e00cd6775f7eee4"
+            ]
+        ]
+    },
+    {
+        "id": "9e00cd6775f7eee4",
+        "type": "rpi-gpio out",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "humidifier pin",
+        "pin": "13",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 1160,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "73e0adc899da21c8",
+        "type": "delay",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "Wait 45 mins",
+        "pauseType": "delay",
+        "timeout": "45",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "x": 850,
+        "y": 900,
+        "wires": [
+            [
+                "f3424efddcaac61d"
+            ]
+        ]
+    },
+    {
+        "id": "f3424efddcaac61d",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "maintanence is FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "maintanence",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1060,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e65101b0861003d7",
+        "type": "debug",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 960,
+        "wires": []
     }
 ]
