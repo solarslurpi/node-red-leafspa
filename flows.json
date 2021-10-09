@@ -4378,5 +4378,72 @@
         "x": 970,
         "y": 2720,
         "wires": []
+    },
+    {
+        "id": "fcfc7757c8cfc1d4",
+        "type": "trigger",
+        "z": "4abea758808e56d0",
+        "name": "watering",
+        "op1": "0",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 780,
+        "y": 1780,
+        "wires": [
+            [
+                "53be8348ec69d20e"
+            ]
+        ]
+    },
+    {
+        "id": "af4d68ac754480a4",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "name": "Test Humidifier pump",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 560,
+        "y": 1780,
+        "wires": [
+            [
+                "fcfc7757c8cfc1d4"
+            ]
+        ]
+    },
+    {
+        "id": "53be8348ec69d20e",
+        "type": "rpi-gpio out",
+        "z": "4abea758808e56d0",
+        "name": "humidifier pump",
+        "pin": "15",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 960,
+        "y": 1780,
+        "wires": []
     }
 ]
