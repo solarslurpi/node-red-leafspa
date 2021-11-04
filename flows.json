@@ -104,7 +104,9 @@
             "691a9e59a263e084"
         ],
         "x": 134,
-        "y": 799
+        "y": 799,
+        "w": 1372,
+        "h": 242
     },
     {
         "id": "ba872fe6adc0f262",
@@ -171,7 +173,9 @@
             "8f979df0be509094"
         ],
         "x": 134,
-        "y": 1059
+        "y": 1059,
+        "w": 1412,
+        "h": 242
     },
     {
         "id": "6c6d661cc9832c5f",
@@ -195,7 +199,9 @@
             "91f04f48495fec01"
         ],
         "x": 134,
-        "y": 1319
+        "y": 1319,
+        "w": 932,
+        "h": 182
     },
     {
         "id": "5cd41cd596d96214",
@@ -221,8 +227,10 @@
             "741eb90c1f6ec67f",
             "08432c4ae4642529"
         ],
-        "x": 134,
-        "y": 1839
+        "x": null,
+        "y": null,
+        "w": null,
+        "h": null
     },
     {
         "id": "c46e0f1aa3ade45f",
@@ -247,12 +255,14 @@
             "9e00cd6775f7eee4",
             "73e0adc899da21c8",
             "f3424efddcaac61d",
-            "e65101b0861003d7"
+            "e65101b0861003d7",
+            "53c4eac6e94ffc2d",
+            "da0b31bae02beb36"
         ],
-        "x": 64,
-        "y": 779,
+        "x": 104,
+        "y": 799,
         "w": 1192,
-        "h": 222
+        "h": 242
     },
     {
         "id": "c1f9dd9005199070",
@@ -281,11 +291,14 @@
             "a1296ba7044ee47f",
             "81cb106ae918aa73",
             "0afb20ee3d565630",
-            "39819b7448fd0788",
-            "4da3ba0ace62a98e"
+            "4da3ba0ace62a98e",
+            "a281ccd7b48cfc28",
+            "c5403bf55494f94b"
         ],
         "x": 194,
-        "y": 99
+        "y": 99,
+        "w": 1112,
+        "h": 362
     },
     {
         "id": "11670cc3ba018b59",
@@ -310,7 +323,9 @@
             "e1377f3696e0121c"
         ],
         "x": 134,
-        "y": 579
+        "y": 579,
+        "w": 1192,
+        "h": 202
     },
     {
         "id": "bd52ceb7e193caff",
@@ -1675,7 +1690,7 @@
         "type": "function",
         "z": "7f5b70e481620d6e",
         "name": "Check if we're getting readings",
-        "func": "if (isNaN(msg.payload.co2Concentration) ){\n    msg.payload = false;\n}else {\n    msg.payload = true;\n}\nreturn msg;",
+        "func": "/* I did separate if statements because of the way I was finding\nerrors coming in.  If the I2C interface isn't working, there \nis a different error than if the I2C interface is working but the \nthe sensor is not.\n*/\n if (msg.payload == \"read-measurement\") {\n    node.warn(\"** Error: Check Sensor.  I2C interface is not working...\");\n    msg.payload = false;\n    return msg;\n    \n}\n\nif (isNaN(msg.payload.co2Concentration) ){\n    node.warn(\"** ERROR: Check Sensor Not getting valid CO2 readings...\");\n    msg.payload = false\n    return msg;\n}\nelse {\n    msg.payload = true;\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3078,8 +3093,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 200,
-        "y": 840,
+        "x": 240,
+        "y": 860,
         "wires": [
             [
                 "0816a5ae88264cbf"
@@ -3108,8 +3123,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 200,
-        "y": 920,
+        "x": 240,
+        "y": 940,
         "wires": [
             [
                 "0816a5ae88264cbf"
@@ -3135,14 +3150,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 390,
-        "y": 880,
+        "x": 430,
+        "y": 900,
         "wires": [
             [
                 "54fb67ba0ef3287b"
             ],
             [
-                "95cd08fdc45a781f"
+                "53c4eac6e94ffc2d"
             ]
         ]
     },
@@ -3173,8 +3188,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 860,
+        "x": 650,
+        "y": 880,
         "wires": [
             [
                 "e7eb39dee445d94c",
@@ -3211,8 +3226,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 920,
+        "x": 860,
+        "y": 1000,
         "wires": [
             [
                 "e65101b0861003d7"
@@ -3239,8 +3254,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 890,
-        "y": 820,
+        "x": 930,
+        "y": 840,
         "wires": [
             [
                 "917cb0c3bbbf7e80"
@@ -3258,8 +3273,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1150,
-        "y": 820,
+        "x": 1190,
+        "y": 840,
         "wires": []
     },
     {
@@ -3282,8 +3297,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 900,
-        "y": 860,
+        "x": 940,
+        "y": 880,
         "wires": [
             [
                 "9e00cd6775f7eee4"
@@ -3301,8 +3316,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1160,
-        "y": 880,
+        "x": 1200,
+        "y": 900,
         "wires": []
     },
     {
@@ -3322,8 +3337,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "allowrate": false,
-        "x": 850,
-        "y": 900,
+        "x": 890,
+        "y": 920,
         "wires": [
             [
                 "f3424efddcaac61d"
@@ -3350,10 +3365,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1060,
-        "y": 940,
+        "x": 1100,
+        "y": 960,
         "wires": [
-            []
+            [
+                "e65101b0861003d7"
+            ]
         ]
     },
     {
@@ -3369,8 +3386,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 960,
+        "x": 1170,
+        "y": 1000,
         "wires": []
     },
     {
@@ -3507,7 +3524,6 @@
         "wires": [
             [
                 "11e485116eee57f2",
-                "39819b7448fd0788",
                 "84278bf54d79cd76",
                 "73e9b65f7062e826",
                 "0afb20ee3d565630"
@@ -3832,8 +3848,8 @@
         "g": "c1f9dd9005199070",
         "name": "What's going on",
         "info": "# Taking Readings\nThe scd30 sensor is probed every \"n\" seconds to find out the temperature, relative humidity, and CO2 levels.\n## Noise\nSince the values can be noisy, the values are averaged over a window of values.\n## Global variables\nGlobal variables for temperature, CO2 and humidity are then created.\n\n## Monitor\nThese values are used during monitoring to change the power switch state:\n- within range (do nothing)\n- over range (turn switch off that is attached to either the CO2 or humidifier)\n- below range (turn switch on)\n\n## Store Values\nThe variables, as well as whether the CO2 or humidifier plugs were on or off are stored in an influx database every so often.",
-        "x": 330,
-        "y": 400,
+        "x": 320,
+        "y": 420,
         "wires": []
     },
     {
@@ -3842,26 +3858,9 @@
         "z": "4abea758808e56d0",
         "g": "c1f9dd9005199070",
         "name": "",
-        "x": 680,
+        "env": [],
+        "x": 850,
         "y": 400,
-        "wires": []
-    },
-    {
-        "id": "39819b7448fd0788",
-        "type": "debug",
-        "z": "4abea758808e56d0",
-        "g": "c1f9dd9005199070",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 650,
-        "y": 160,
         "wires": []
     },
     {
@@ -4599,340 +4598,6 @@
         ]
     },
     {
-        "id": "e20bda519284cf81",
-        "type": "PID",
-        "z": "d9bacc2cf62aebc4",
-        "name": "",
-        "setpoint": "50",
-        "pb": "11",
-        "ti": "1800",
-        "td": "6",
-        "integral_default": "0",
-        "smooth_factor": "0",
-        "max_interval": 600,
-        "enable": "1",
-        "disabled_op": "0",
-        "x": 710,
-        "y": 440,
-        "wires": [
-            [
-                "ab3715d1aa6ad6f7",
-                "d27ecbbd53aba7c7"
-            ]
-        ]
-    },
-    {
-        "id": "69a459b6c9beec41",
-        "type": "change",
-        "z": "d9bacc2cf62aebc4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "op",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 949.5,
-        "y": 515,
-        "wires": [
-            [
-                "31b9f9cdcc3c9f58"
-            ]
-        ]
-    },
-    {
-        "id": "3a0c9ef4c9adc405",
-        "type": "inject",
-        "z": "d9bacc2cf62aebc4",
-        "name": "Setpoint 30",
-        "props": [
-            {
-                "p": "payload",
-                "v": "30",
-                "vt": "num"
-            },
-            {
-                "p": "topic",
-                "v": "setpoint",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "setpoint",
-        "payload": "30",
-        "payloadType": "num",
-        "x": 452,
-        "y": 463,
-        "wires": [
-            [
-                "e20bda519284cf81"
-            ]
-        ]
-    },
-    {
-        "id": "906e4e75aa0bb9b6",
-        "type": "inject",
-        "z": "d9bacc2cf62aebc4",
-        "name": "Setpoint 80",
-        "props": [
-            {
-                "p": "payload",
-                "v": "80",
-                "vt": "num"
-            },
-            {
-                "p": "topic",
-                "v": "setpoint",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "setpoint",
-        "payload": "80",
-        "payloadType": "num",
-        "x": 450.5,
-        "y": 512,
-        "wires": [
-            [
-                "e20bda519284cf81"
-            ]
-        ]
-    },
-    {
-        "id": "8500be7c1487625f",
-        "type": "inject",
-        "z": "d9bacc2cf62aebc4",
-        "name": "enable",
-        "props": [
-            {
-                "p": "payload",
-                "v": "true",
-                "vt": "bool"
-            },
-            {
-                "p": "topic",
-                "v": "enable",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "enable",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 443,
-        "y": 348,
-        "wires": [
-            [
-                "e20bda519284cf81"
-            ]
-        ]
-    },
-    {
-        "id": "cf46d9046eabacd2",
-        "type": "inject",
-        "z": "d9bacc2cf62aebc4",
-        "name": "disable",
-        "props": [
-            {
-                "p": "payload",
-                "v": "false",
-                "vt": "bool"
-            },
-            {
-                "p": "topic",
-                "v": "enable",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "enable",
-        "payload": "false",
-        "payloadType": "bool",
-        "x": 443.5,
-        "y": 398,
-        "wires": [
-            [
-                "e20bda519284cf81"
-            ]
-        ]
-    },
-    {
-        "id": "ab3715d1aa6ad6f7",
-        "type": "subflow:eb89d693b7773219",
-        "z": "d9bacc2cf62aebc4",
-        "name": "",
-        "env": [],
-        "x": 730,
-        "y": 200,
-        "wires": [
-            [
-                "9103b8221300f519",
-                "e20bda519284cf81"
-            ]
-        ]
-    },
-    {
-        "id": "9103b8221300f519",
-        "type": "change",
-        "z": "d9bacc2cf62aebc4",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "pv",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 990,
-        "y": 200,
-        "wires": [
-            [
-                "31b9f9cdcc3c9f58"
-            ]
-        ]
-    },
-    {
-        "id": "d27ecbbd53aba7c7",
-        "type": "range",
-        "z": "d9bacc2cf62aebc4",
-        "minin": "0",
-        "maxin": "1",
-        "minout": "0",
-        "maxout": "25",
-        "action": "scale",
-        "round": false,
-        "name": "Scale power",
-        "x": 775,
-        "y": 515,
-        "wires": [
-            [
-                "69a459b6c9beec41"
-            ]
-        ]
-    },
-    {
-        "id": "31b9f9cdcc3c9f58",
-        "type": "ui_chart",
-        "z": "d9bacc2cf62aebc4",
-        "name": "",
-        "group": "c45a83a3.d00908",
-        "order": 0,
-        "width": "6",
-        "height": "6",
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "0",
-        "ymax": "100",
-        "removeOlder": "3",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#cf0005",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 1139,
-        "y": 440,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "01b080213f22b17b",
-        "type": "inject",
-        "z": "d9bacc2cf62aebc4",
-        "name": "Clear chart on deploy",
-        "props": [
-            {
-                "p": "payload",
-                "v": "{\"data\":[]}",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "topic": "",
-        "payload": "{\"data\":[]}",
-        "payloadType": "json",
-        "x": 700,
-        "y": 583,
-        "wires": [
-            [
-                "677e02bba8dfe1ce"
-            ]
-        ]
-    },
-    {
-        "id": "677e02bba8dfe1ce",
-        "type": "change",
-        "z": "d9bacc2cf62aebc4",
-        "name": "",
-        "rules": [
-            {
-                "t": "move",
-                "p": "payload.data",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 936,
-        "y": 583,
-        "wires": [
-            [
-                "31b9f9cdcc3c9f58"
-            ]
-        ]
-    },
-    {
         "id": "4e6ebeee7ef922c2",
         "type": "function",
         "z": "b1f5580f.0b59c8",
@@ -5001,7 +4666,7 @@
             {
                 "p": "Ki",
                 "pt": "flow",
-                "to": ".01",
+                "to": ".004",
                 "tot": "str"
             },
             {
@@ -5013,7 +4678,7 @@
             {
                 "p": "Kd",
                 "pt": "flow",
-                "to": ".02",
+                "to": ".05",
                 "tot": "num"
             }
         ],
@@ -5055,19 +4720,19 @@
         "id": "73c3b08539990586",
         "type": "inject",
         "z": "b1f5580f.0b59c8",
-        "name": "check CO2 level every minute",
+        "name": "check CO2 level every 30 seconds",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "60",
+        "repeat": "30",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 230,
+        "x": 250,
         "y": 720,
         "wires": [
             [
@@ -5175,7 +4840,8 @@
             [
                 "c038b07b66bf8ae4"
             ]
-        ]
+        ],
+        "info": "# Why This code?\nBesides light and water, CO2 is a major input into the photosynthetic process.  I want to maintain a level of CO2 that will improve the photosynthetic process.  The CO2 I use resides in a cannister and is released by using a solenoid.  My original effort used a very simple ON when the measured CO2 was below a minimum then OFF when the CO2 reached above a maximum.  The amount of oscillation was significant.  So I learned about PID controllers.\n# What Hampered Learning About PID Controllers\nMy working conceptual model assumed PID controllers were only effective if the output was continous/analog.  I was thinking of PID controllers for cruise control or for temperature adjustment.  It completely alluded me that turning on and off a solenoid based on PID input could work...and then [a kind person on Reddit set me on a path to use PID control using a solenoid to control the output](https://www.reddit.com/r/Homebrewing/comments/q84l0a/diy_co2_flow_regulator_via_pid_not_sure_about/hgop0il/?context=3).\n\n## From regreddit\n\n_Hydroponic software controls developer here. You don't need to control flow from the Pi, you need to control the duty cycle of the solenoid. Set the flow rate to something fixed like 10 lpm, then control the solenoid based on the % error of your CO2 ppm setpoint. To do this, you have to also know the CO2 ppm of your grow room, and feed that data to the pi. From there, calculate how far off you are from the ppm setpoint. Let's used a simple example using round numbers: Your desired ppm is 1500. That's called your Setpoint (SP) Your current ppm is 1000. This is called your Process Value (PV). The difference between them is called your Process Error (PE) SP-PV=PE. Your PE is 500, and we want to get to 1500 without overshooting SP. To do that, let's choose a flow duty cycle of say 5 seconds, and a sample duty cycle of 60 seconds. Every 60 seconds, read the CO2, and calculate PE. Open the solenoid 5 x some % of PE. Let's call it 1% . So 1% of 500 is 5. So 5 (duty cycle) * 5 (PE) = 25. Open your solenoid for 25 seconds, then wait until your next cycle and do it again. Next time, your PE is only 300, so 3001%= 3. 35 =15 seconds. Next cycle, PE is 250, so 5*2.5 12.5, etc. As your PE drops, your P in the PID algorithm drops lower and lower. Your I in the PID loop is just the fixed duty cycle. You'll never open the solenoid for less than 5 secs, ensuring the you'll eventually hit your SP. You don't need D in this style of control.)_\n\n\n# Best Resource for Learning About PID Controllers"
     },
     {
         "id": "0311c634411a4bf7",
@@ -5266,6 +4932,187 @@
         "wires": [
             [
                 "265a202fcef60b44"
+            ]
+        ]
+    },
+    {
+        "id": "53c4eac6e94ffc2d",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "set HUMIDITY_ON to true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "HUMIDITY_ON",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 940,
+        "wires": [
+            [
+                "da0b31bae02beb36"
+            ]
+        ]
+    },
+    {
+        "id": "da0b31bae02beb36",
+        "type": "change",
+        "z": "8b70799ce97cf17d",
+        "g": "c46e0f1aa3ade45f",
+        "name": "set CO2_ON to true",
+        "rules": [
+            {
+                "t": "set",
+                "p": "CO2_ON",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1000,
+        "wires": [
+            [
+                "95cd08fdc45a781f"
+            ]
+        ]
+    },
+    {
+        "id": "a281ccd7b48cfc28",
+        "type": "catch",
+        "z": "4abea758808e56d0",
+        "g": "c1f9dd9005199070",
+        "name": "",
+        "scope": [
+            "4da3ba0ace62a98e"
+        ],
+        "uncaught": false,
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "c5403bf55494f94b"
+            ]
+        ]
+    },
+    {
+        "id": "2bd6810d.e22ece",
+        "type": "catch",
+        "z": "d9bacc2cf62aebc4",
+        "name": "",
+        "scope": [
+            "2c94a22c.91012e"
+        ],
+        "uncaught": false,
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "d16b9fac.8212a"
+            ]
+        ]
+    },
+    {
+        "id": "2c94a22c.91012e",
+        "type": "function",
+        "z": "d9bacc2cf62aebc4",
+        "name": "Throw Error",
+        "func": "node.error(\"an example error\", msg);   ",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d16b9fac.8212a",
+        "type": "debug",
+        "z": "d9bacc2cf62aebc4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "error",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "c5ee9670.5dbbd8",
+        "type": "inject",
+        "z": "d9bacc2cf62aebc4",
+        "name": "Trigger error",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 510,
+        "y": 260,
+        "wires": [
+            [
+                "2c94a22c.91012e"
+            ]
+        ]
+    },
+    {
+        "id": "c5403bf55494f94b",
+        "type": "change",
+        "z": "4abea758808e56d0",
+        "g": "c1f9dd9005199070",
+        "name": "set payload to error source type",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "error.source.type",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 400,
+        "wires": [
+            [
+                "0afb20ee3d565630"
             ]
         ]
     }
