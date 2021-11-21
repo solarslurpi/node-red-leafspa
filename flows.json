@@ -16,7 +16,7 @@
     {
         "id": "d9bacc2cf62aebc4",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Playground",
         "disabled": false,
         "info": ""
     },
@@ -39,12 +39,23 @@
                 "y": 80,
                 "wires": [
                     {
-                        "id": "34247234f0668477"
+                        "id": "163335db1cb8164e"
                     }
                 ]
             }
         ],
-        "out": [],
+        "out": [
+            {
+                "x": 1340,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "23104b00346c1d1f",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
         "env": [],
         "meta": {},
         "color": "#DDAA99"
@@ -77,36 +88,6 @@
                 ]
             }
         ]
-    },
-    {
-        "id": "968ef5bdcf2bce96",
-        "type": "group",
-        "z": "4abea758808e56d0",
-        "name": "Monitor CO2",
-        "style": {
-            "stroke": "#ffC000",
-            "fill": "#ffefbf",
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "cf0e0aef5fbb50e9",
-            "924fbb8788b9fc93",
-            "8a6cf02093cdb7e4",
-            "2c22ddd44c08a475",
-            "60d8efba376dfdd6",
-            "bb1dfaea5945dde9",
-            "12c6f960277933bb",
-            "e1adadd899171f5e",
-            "dda3b658556016e0",
-            "be7087c6a93db215",
-            "e5488b6976dd7c04",
-            "691a9e59a263e084"
-        ],
-        "x": 134,
-        "y": 799,
-        "w": 1372,
-        "h": 242
     },
     {
         "id": "ba872fe6adc0f262",
@@ -227,10 +208,10 @@
             "741eb90c1f6ec67f",
             "08432c4ae4642529"
         ],
-        "x": null,
-        "y": null,
-        "w": null,
-        "h": null
+        "x": 134,
+        "y": 1839,
+        "w": 1492,
+        "h": 182
     },
     {
         "id": "c46e0f1aa3ade45f",
@@ -289,16 +270,15 @@
             "1719f5a5a4164309",
             "0673833916e00a97",
             "a1296ba7044ee47f",
-            "81cb106ae918aa73",
             "0afb20ee3d565630",
             "4da3ba0ace62a98e",
             "a281ccd7b48cfc28",
             "c5403bf55494f94b"
         ],
-        "x": 194,
-        "y": 99,
-        "w": 1112,
-        "h": 362
+        "x": 154,
+        "y": 119,
+        "w": 1552,
+        "h": 282
     },
     {
         "id": "11670cc3ba018b59",
@@ -325,6 +305,34 @@
         "x": 134,
         "y": 579,
         "w": 1192,
+        "h": 202
+    },
+    {
+        "id": "2aaa68f68d8fd77c",
+        "type": "group",
+        "z": "4abea758808e56d0",
+        "name": "Adjust CO2 Level",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffefbf",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "9d999439c54af0da",
+            "d23cb0ed0c018915",
+            "8115cdb33c2eb383",
+            "09a1997cf283f87c",
+            "4a7db3adf19b8993",
+            "2b15c635124ac3e4",
+            "8ea7ca419625113b",
+            "5c0c596782767209",
+            "9db1913821a3e731",
+            "0a3f95f85eb5341a"
+        ],
+        "x": 134,
+        "y": 819,
+        "w": 1492,
         "h": 202
     },
     {
@@ -596,153 +604,6 @@
         "collapse": true
     },
     {
-        "id": "cf0e0aef5fbb50e9",
-        "type": "switch",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "is CO2 in range?",
-        "property": "CO2",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "btwn",
-                "v": "1000",
-                "vt": "num",
-                "v2": "950",
-                "v2t": "num"
-            },
-            {
-                "t": "gt",
-                "v": "1000",
-                "vt": "num"
-            },
-            {
-                "t": "lt",
-                "v": "950",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 3,
-        "x": 890,
-        "y": 900,
-        "wires": [
-            [
-                "2c22ddd44c08a475"
-            ],
-            [
-                "dda3b658556016e0",
-                "be7087c6a93db215"
-            ],
-            [
-                "8a6cf02093cdb7e4",
-                "924fbb8788b9fc93"
-            ]
-        ]
-    },
-    {
-        "id": "924fbb8788b9fc93",
-        "type": "change",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "Need more CO2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Need more CO2",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1140,
-        "y": 1000,
-        "wires": [
-            [
-                "60d8efba376dfdd6"
-            ]
-        ]
-    },
-    {
-        "id": "8a6cf02093cdb7e4",
-        "type": "change",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "Turn CO2 on ",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "false",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1150,
-        "y": 960,
-        "wires": [
-            [
-                "e1adadd899171f5e"
-            ]
-        ]
-    },
-    {
-        "id": "2c22ddd44c08a475",
-        "type": "change",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "CO2 OK",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "CO2 OK",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1180,
-        "y": 840,
-        "wires": [
-            [
-                "60d8efba376dfdd6"
-            ]
-        ]
-    },
-    {
-        "id": "60d8efba376dfdd6",
-        "type": "debug",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 880,
-        "wires": []
-    },
-    {
         "id": "09d90076001a5c69",
         "type": "comment",
         "z": "4abea758808e56d0",
@@ -751,32 +612,6 @@
         "x": 1380,
         "y": 3160,
         "wires": []
-    },
-    {
-        "id": "bb1dfaea5945dde9",
-        "type": "inject",
-        "z": "4abea758808e56d0",
-        "d": true,
-        "g": "968ef5bdcf2bce96",
-        "name": "check CO2 level every 5 seconds",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "5",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 320,
-        "y": 860,
-        "wires": [
-            [
-                "691a9e59a263e084"
-            ]
-        ]
     },
     {
         "id": "2994c65a03819980",
@@ -872,30 +707,6 @@
                 "ca2dd1046dede78b",
                 "44eb4d7df54d1880",
                 "75250e59829d03b9"
-            ]
-        ]
-    },
-    {
-        "id": "12c6f960277933bb",
-        "type": "switch",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "time to add CO2?",
-        "property": "CO2_ON",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 690,
-        "y": 920,
-        "wires": [
-            [
-                "cf0e0aef5fbb50e9"
             ]
         ]
     },
@@ -1050,8 +861,9 @@
         "id": "f0dde5405daf38ee",
         "type": "inject",
         "z": "4abea758808e56d0",
+        "d": true,
         "g": "9dcaa677a0671838",
-        "name": "check humidity every 5 seconds",
+        "name": "check VPD every 5 seconds",
         "props": [
             {
                 "p": "payload"
@@ -1063,7 +875,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 320,
+        "x": 300,
         "y": 1140,
         "wires": [
             [
@@ -1197,59 +1009,6 @@
         ]
     },
     {
-        "id": "9c05f87b4d5c6e5c",
-        "type": "comment",
-        "z": "4abea758808e56d0",
-        "name": "DOCUMENTATION: What's going on",
-        "info": "# Reading Temp, Humidity, CO2 values\nOver and over, the [scd 30 sensor](https://learn.adafruit.com/adafruit-scd30) is read to provide info on the temperature, CO2 level, and humidity level.  These readings are stored in variables that are used during data logging and monitoring.\n\n# Writing and Viewing Readings\nEvery so often, the values read from the scd30 are stored in an influx database (database name = `leafspa` measurements are within `readings`).  Grafana is used to view the readings.",
-        "x": 580,
-        "y": 20,
-        "wires": []
-    },
-    {
-        "id": "e1adadd899171f5e",
-        "type": "rpi-gpio out",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "CO2 pin",
-        "pin": "11",
-        "set": true,
-        "level": "1",
-        "freq": "",
-        "out": "out",
-        "x": 1400,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "dda3b658556016e0",
-        "type": "change",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "Turn CO2 off",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1170,
-        "y": 920,
-        "wires": [
-            [
-                "e1adadd899171f5e"
-            ]
-        ]
-    },
-    {
         "id": "04d93dab9d49d747",
         "type": "rpi-gpio out",
         "z": "4abea758808e56d0",
@@ -1377,34 +1136,6 @@
         "x": 970,
         "y": 1400,
         "wires": []
-    },
-    {
-        "id": "be7087c6a93db215",
-        "type": "change",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "CO2 high",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "CO2 high",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1180,
-        "y": 880,
-        "wires": [
-            [
-                "60d8efba376dfdd6"
-            ]
-        ]
     },
     {
         "id": "2d6dc1fd41eb0523",
@@ -1689,19 +1420,25 @@
         "id": "34247234f0668477",
         "type": "function",
         "z": "7f5b70e481620d6e",
-        "name": "Check if we're getting readings",
-        "func": "/* I did separate if statements because of the way I was finding\nerrors coming in.  If the I2C interface isn't working, there \nis a different error than if the I2C interface is working but the \nthe sensor is not.\n*/\n if (msg.payload == \"read-measurement\") {\n    node.warn(\"** Error: Check Sensor.  I2C interface is not working...\");\n    msg.payload = false;\n    return msg;\n    \n}\n\nif (isNaN(msg.payload.co2Concentration) ){\n    node.warn(\"** ERROR: Check Sensor Not getting valid CO2 readings...\");\n    msg.payload = false\n    return msg;\n}\nelse {\n    msg.payload = true;\n}\nreturn msg;",
+        "name": "Check if we're getting valid readings",
+        "func": "\n/* ASSUMPTIONS:\n- Humidity should read at least greater than 30 (percent) and less than or equal to 100.\n- Temperature should read at least greater than 50 (degrees F) and less than 100 degrees F.\n- CO2 level should read at least 350 (ppm) and less than 1800.\n*/\n\n/* I did separate if statements because of the way I was finding\nerrors coming in.  If the I2C interface isn't working, there \nis a different error than if the I2C interface is working but the \nthe sensor is not.\n*/\n if (msg.payload == \"read-measurement\") {\n    node.warn(\"** Error: Check Sensor.  I2C interface is not working...\");\n    msg.payload.good_readings = false;\n    return msg;\n    \n}\n/* The Sensor could be sending bad readings */\n\nif (isNaN(msg.payload.co2Concentration) ){\n    node.warn(\"** ERROR: Check Sensor. Not getting valid readings...\");\n    msg.payload.good_readings = false;\n    \n}else if (msg.payload.relativeHumidity < 30 || msg.payload.relativeHumidity > 100){\n    node.warn(\"** ERROR: Check Sensor. Humidity reading is \"+msg.payload.relativeHumidity);\n    msg.payload.good_readings = false;\n}else if (msg.payload.temperature < 50 || msg.payload.temperature > 90){\n    node.warn(\"** ERROR: Check Sensor. Temperature reading is \"+msg.payload.Temperature);\n    msg.payload.good_readings = false;\n}else if (msg.payload.co2Concentration < 350 || msg.payload.co2Concentration > 1800){\n    node.warn(\"** ERROR: Check Sensor. CO2 level reading is \"+msg.payload.co2Concentration);\n    msg.payload.good_readings = false;\n}\nelse {\n    msg.payload.good_readings = true;\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 80,
+        "x": 430,
+        "y": 100,
         "wires": [
             [
                 "3c657af948247c47"
             ]
+        ],
+        "inputLabels": [
+            "Unvalidated Sensor Readings"
+        ],
+        "outputLabels": [
+            "Validated Sensor readings"
         ]
     },
     {
@@ -1709,7 +1446,7 @@
         "type": "switch",
         "z": "7f5b70e481620d6e",
         "name": "true if we are getting readings",
-        "property": "payload",
+        "property": "payload.good_readings",
         "propertyType": "msg",
         "rules": [
             {
@@ -1722,11 +1459,10 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 470,
-        "y": 80,
+        "x": 730,
+        "y": 100,
         "wires": [
             [
-                "23104b00346c1d1f",
                 "96ad718c50324646"
             ],
             [
@@ -1753,8 +1489,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 740,
-        "y": 80,
+        "x": 1180,
+        "y": 40,
         "wires": [
             []
         ]
@@ -1778,8 +1514,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
-        "y": 120,
+        "x": 950,
+        "y": 160,
         "wires": [
             [
                 "7c2d03e0b4809e9e",
@@ -1804,8 +1540,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1000,
-        "y": 80,
+        "x": 1220,
+        "y": 100,
         "wires": [
             [
                 "5746a4c7a8a82e23",
@@ -1834,8 +1570,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1490,
-        "y": 80,
+        "x": 1610,
+        "y": 160,
         "wires": [
             [
                 "932ab0db48ba4e93"
@@ -1855,33 +1591,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1730,
-        "y": 20,
+        "x": 1850,
+        "y": 100,
         "wires": []
-    },
-    {
-        "id": "e5488b6976dd7c04",
-        "type": "switch",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "is sensor working?",
-        "property": "sensor_working",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 490,
-        "y": 920,
-        "wires": [
-            [
-                "12c6f960277933bb"
-            ]
-        ]
     },
     {
         "id": "ce419125d4c127e7",
@@ -1919,8 +1631,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
-        "y": 180,
+        "x": 1190,
+        "y": 200,
         "wires": [
             [
                 "4408918677e3640b"
@@ -1939,8 +1651,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 180,
+        "x": 1250,
+        "y": 280,
         "wires": []
     },
     {
@@ -1962,10 +1674,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 730,
+        "x": 930,
         "y": 40,
         "wires": [
-            []
+            [
+                "23104b00346c1d1f"
+            ]
         ]
     },
     {
@@ -1987,8 +1701,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1220,
-        "y": 20,
+        "x": 1500,
+        "y": 100,
         "wires": [
             []
         ]
@@ -2787,8 +2501,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1460,
-        "y": 140,
+        "x": 1580,
+        "y": 220,
         "wires": [
             [
                 "a9643f1182d9505c"
@@ -2805,8 +2519,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1720,
-        "y": 140,
+        "x": 1840,
+        "y": 220,
         "wires": []
     },
     {
@@ -2828,8 +2542,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1470,
-        "y": 180,
+        "x": 1590,
+        "y": 260,
         "wires": [
             [
                 "13b1712706b4a090"
@@ -2846,8 +2560,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1730,
-        "y": 200,
+        "x": 1850,
+        "y": 280,
         "wires": []
     },
     {
@@ -2869,35 +2583,11 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1280,
-        "y": 80,
+        "x": 1400,
+        "y": 160,
         "wires": [
             [
                 "65635cb9b4bd5851"
-            ]
-        ]
-    },
-    {
-        "id": "691a9e59a263e084",
-        "type": "switch",
-        "z": "4abea758808e56d0",
-        "g": "968ef5bdcf2bce96",
-        "name": "not in maintanence?",
-        "property": "maintanence",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 260,
-        "y": 920,
-        "wires": [
-            [
-                "e5488b6976dd7c04"
             ]
         ]
     },
@@ -3519,13 +3209,10 @@
         "g": "c1f9dd9005199070",
         "scd30Config": "1ea5dfa03b11893e",
         "name": "scd30",
-        "x": 370,
-        "y": 240,
+        "x": 330,
+        "y": 260,
         "wires": [
             [
-                "11e485116eee57f2",
-                "84278bf54d79cd76",
-                "73e9b65f7062e826",
                 "0afb20ee3d565630"
             ]
         ]
@@ -3541,7 +3228,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "msg.payload.temperature*9/5 + 32 ",
+                "to": "msg.payload.temperature",
                 "tot": "jsonata"
             }
         ],
@@ -3550,7 +3237,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 590,
+        "x": 990,
         "y": 220,
         "wires": [
             [
@@ -3578,7 +3265,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
+        "x": 1380,
         "y": 200,
         "wires": [
             [
@@ -3607,8 +3294,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 370,
-        "y": 140,
+        "x": 330,
+        "y": 160,
         "wires": [
             [
                 "4da3ba0ace62a98e"
@@ -3635,7 +3322,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
+        "x": 970,
         "y": 340,
         "wires": [
             [
@@ -3663,7 +3350,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 580,
+        "x": 980,
         "y": 280,
         "wires": [
             [
@@ -3685,7 +3372,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
+        "x": 1590,
         "y": 180,
         "wires": []
     },
@@ -3709,7 +3396,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 880,
+        "x": 1280,
         "y": 340,
         "wires": [
             [
@@ -3737,7 +3424,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
+        "x": 1330,
         "y": 280,
         "wires": [
             [
@@ -3759,7 +3446,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1110,
+        "x": 1510,
         "y": 340,
         "wires": []
     },
@@ -3777,7 +3464,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
+        "x": 1570,
         "y": 240,
         "wires": []
     },
@@ -3793,7 +3480,7 @@
         "round": "1",
         "mult": "single",
         "reduce": false,
-        "x": 740,
+        "x": 1140,
         "y": 220,
         "wires": [
             [
@@ -3813,7 +3500,7 @@
         "round": "1",
         "mult": "single",
         "reduce": false,
-        "x": 720,
+        "x": 1120,
         "y": 280,
         "wires": [
             [
@@ -3833,7 +3520,7 @@
         "round": "1",
         "mult": "single",
         "reduce": false,
-        "x": 700,
+        "x": 1100,
         "y": 340,
         "wires": [
             [
@@ -3842,26 +3529,21 @@
         ]
     },
     {
-        "id": "81cb106ae918aa73",
-        "type": "comment",
-        "z": "4abea758808e56d0",
-        "g": "c1f9dd9005199070",
-        "name": "What's going on",
-        "info": "# Taking Readings\nThe scd30 sensor is probed every \"n\" seconds to find out the temperature, relative humidity, and CO2 levels.\n## Noise\nSince the values can be noisy, the values are averaged over a window of values.\n## Global variables\nGlobal variables for temperature, CO2 and humidity are then created.\n\n## Monitor\nThese values are used during monitoring to change the power switch state:\n- within range (do nothing)\n- over range (turn switch off that is attached to either the CO2 or humidifier)\n- below range (turn switch on)\n\n## Store Values\nThe variables, as well as whether the CO2 or humidifier plugs were on or off are stored in an influx database every so often.",
-        "x": 320,
-        "y": 420,
-        "wires": []
-    },
-    {
         "id": "0afb20ee3d565630",
         "type": "subflow:7f5b70e481620d6e",
         "z": "4abea758808e56d0",
         "g": "c1f9dd9005199070",
         "name": "",
         "env": [],
-        "x": 850,
-        "y": 400,
-        "wires": []
+        "x": 630,
+        "y": 280,
+        "wires": [
+            [
+                "11e485116eee57f2",
+                "84278bf54d79cd76",
+                "73e9b65f7062e826"
+            ]
+        ]
     },
     {
         "id": "a0ea1b32b045e152",
@@ -3877,7 +3559,7 @@
             }
         ],
         "active": true,
-        "x": 200,
+        "x": 460,
         "y": 40,
         "wires": []
     },
@@ -4634,60 +4316,6 @@
         "wires": []
     },
     {
-        "id": "d767adcae46238f5",
-        "type": "config",
-        "z": "b1f5580f.0b59c8",
-        "name": "\"PID\" settings",
-        "properties": [
-            {
-                "p": "setpoint_CO2",
-                "pt": "flow",
-                "to": "1200",
-                "tot": "num"
-            },
-            {
-                "p": "min_CO2_on",
-                "pt": "flow",
-                "to": "5",
-                "tot": "num"
-            },
-            {
-                "p": "Kp",
-                "pt": "flow",
-                "to": ".01",
-                "tot": "num"
-            },
-            {
-                "p": "cum_error",
-                "pt": "flow",
-                "to": "0",
-                "tot": "num"
-            },
-            {
-                "p": "Ki",
-                "pt": "flow",
-                "to": ".004",
-                "tot": "str"
-            },
-            {
-                "p": "last_error",
-                "pt": "flow",
-                "to": "0",
-                "tot": "num"
-            },
-            {
-                "p": "Kd",
-                "pt": "flow",
-                "to": ".05",
-                "tot": "num"
-            }
-        ],
-        "active": true,
-        "x": 620,
-        "y": 680,
-        "wires": []
-    },
-    {
         "id": "1372e9622e79503b",
         "type": "inject",
         "z": "b1f5580f.0b59c8",
@@ -4717,133 +4345,6 @@
         ]
     },
     {
-        "id": "73c3b08539990586",
-        "type": "inject",
-        "z": "b1f5580f.0b59c8",
-        "name": "check CO2 level every 30 seconds",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "30",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 250,
-        "y": 720,
-        "wires": [
-            [
-                "8118fefb67d4c8fb"
-            ]
-        ]
-    },
-    {
-        "id": "dbf6d16d70e6eed9",
-        "type": "switch",
-        "z": "b1f5580f.0b59c8",
-        "name": "within time for CO2 to be on?",
-        "property": "CO2_ON",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 600,
-        "y": 780,
-        "wires": [
-            [
-                "53f8e0396cc983a3"
-            ]
-        ]
-    },
-    {
-        "id": "fa52fea678cfd160",
-        "type": "rpi-gpio out",
-        "z": "b1f5580f.0b59c8",
-        "name": "CO2 pin",
-        "pin": "11",
-        "set": true,
-        "level": "1",
-        "freq": "",
-        "out": "out",
-        "x": 1400,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "599abfb8950669bd",
-        "type": "switch",
-        "z": "b1f5580f.0b59c8",
-        "name": "is sensor working?",
-        "property": "sensor_working",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "true"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 370,
-        "y": 780,
-        "wires": [
-            [
-                "dbf6d16d70e6eed9"
-            ]
-        ]
-    },
-    {
-        "id": "8118fefb67d4c8fb",
-        "type": "switch",
-        "z": "b1f5580f.0b59c8",
-        "name": "not in maintanence?",
-        "property": "maintanence",
-        "propertyType": "global",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 140,
-        "y": 780,
-        "wires": [
-            [
-                "599abfb8950669bd"
-            ]
-        ]
-    },
-    {
-        "id": "53f8e0396cc983a3",
-        "type": "function",
-        "z": "b1f5580f.0b59c8",
-        "name": "Set ms to turn CO2 solenoid on",
-        "func": "current_CO2 = global.get(\"CO2\");\nsetpoint_CO2 = flow.get(\"setpoint_CO2\");\n// Calculate the error term\nerror = setpoint_CO2 - current_CO2;\n// Calculate the Proportional Correction\nKp = flow.get(\"Kp\");\npCorrection = flow.get(\"min_CO2_on\")*Kp*error;\npCorrection = pCorrection - pCorrection % 1;\n// Calculate the Integral Correction\ncum_error = flow.get(\"cum_error\")+error;\nflow.set(\"cum_error\",cum_error);\niCorrection = (cum_error*flow.get(\"Ki\"));\niCorrection = iCorrection - iCorrection % 1;\n// Calculate the Derivative Correction\nlast_error = flow.get(\"last_error\");\nslope = error - last_error;\ndCorrection = slope*flow.get(\"Kd\");\ndCorrection = dCorrection - dCorrection % 1;\nflow.set(\"last_error\",error);\n// Calculate the # Seconds to turn CO2 on\nnum_CO2_seconds = pCorrection + iCorrection + dCorrection;\n// Clamp the Correction to not exceed a maximum \nmax_CO2_seconds = 20;\nmin_CO2_seconds = 0;\nif (num_CO2_seconds > max_CO2_seconds){\n    num_CO2_seconds = max_CO2_seconds;\n}else if (num_CO2_seconds < min_CO2_seconds) {\n    num_CO2_seconds = min_CO2_seconds;\n}\n    \n\nnode.warn(\"current CO2 = \" + current_CO2 + \" Error: = \"+ error);\nnode.warn(\"**>> pCorrection is \"+pCorrection+\" iCorrection is \"+iCorrection);\nnode.warn(\"******** dCorrection is \"+dCorrection);\nnode.warn(\"**** slope is \" + slope);\nnode.warn(\"**** Num CO2 seconds is \"+num_CO2_seconds);\nmsg.delay = num_CO2_seconds*1000 ;\nmsg.payload = msg.delay;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 870,
-        "y": 780,
-        "wires": [
-            [
-                "c038b07b66bf8ae4"
-            ]
-        ],
-        "info": "# Why This code?\nBesides light and water, CO2 is a major input into the photosynthetic process.  I want to maintain a level of CO2 that will improve the photosynthetic process.  The CO2 I use resides in a cannister and is released by using a solenoid.  My original effort used a very simple ON when the measured CO2 was below a minimum then OFF when the CO2 reached above a maximum.  The amount of oscillation was significant.  So I learned about PID controllers.\n# What Hampered Learning About PID Controllers\nMy working conceptual model assumed PID controllers were only effective if the output was continous/analog.  I was thinking of PID controllers for cruise control or for temperature adjustment.  It completely alluded me that turning on and off a solenoid based on PID input could work...and then [a kind person on Reddit set me on a path to use PID control using a solenoid to control the output](https://www.reddit.com/r/Homebrewing/comments/q84l0a/diy_co2_flow_regulator_via_pid_not_sure_about/hgop0il/?context=3).\n\n## From regreddit\n\n_Hydroponic software controls developer here. You don't need to control flow from the Pi, you need to control the duty cycle of the solenoid. Set the flow rate to something fixed like 10 lpm, then control the solenoid based on the % error of your CO2 ppm setpoint. To do this, you have to also know the CO2 ppm of your grow room, and feed that data to the pi. From there, calculate how far off you are from the ppm setpoint. Let's used a simple example using round numbers: Your desired ppm is 1500. That's called your Setpoint (SP) Your current ppm is 1000. This is called your Process Value (PV). The difference between them is called your Process Error (PE) SP-PV=PE. Your PE is 500, and we want to get to 1500 without overshooting SP. To do that, let's choose a flow duty cycle of say 5 seconds, and a sample duty cycle of 60 seconds. Every 60 seconds, read the CO2, and calculate PE. Open the solenoid 5 x some % of PE. Let's call it 1% . So 1% of 500 is 5. So 5 (duty cycle) * 5 (PE) = 25. Open your solenoid for 25 seconds, then wait until your next cycle and do it again. Next time, your PE is only 300, so 3001%= 3. 35 =15 seconds. Next cycle, PE is 250, so 5*2.5 12.5, etc. As your PE drops, your P in the PID algorithm drops lower and lower. Your I in the PID loop is just the fixed duty cycle. You'll never open the solenoid for less than 5 secs, ensuring the you'll eventually hit your SP. You don't need D in this style of control.)_\n\n\n# Best Resource for Learning About PID Controllers"
-    },
-    {
         "id": "0311c634411a4bf7",
         "type": "change",
         "z": "b1f5580f.0b59c8",
@@ -4866,73 +4367,6 @@
         "y": 580,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "265a202fcef60b44",
-        "type": "trigger",
-        "z": "b1f5580f.0b59c8",
-        "name": "Turn CO2 on/off",
-        "op1": "0",
-        "op2": "1",
-        "op1type": "num",
-        "op2type": "num",
-        "duration": "250",
-        "extend": false,
-        "overrideDelay": true,
-        "units": "hr",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 1220,
-        "y": 760,
-        "wires": [
-            [
-                "fa52fea678cfd160",
-                "d9989230f6ce4f6e"
-            ]
-        ]
-    },
-    {
-        "id": "d9989230f6ce4f6e",
-        "type": "debug",
-        "z": "b1f5580f.0b59c8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1390,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "c038b07b66bf8ae4",
-        "type": "switch",
-        "z": "b1f5580f.0b59c8",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1070,
-        "y": 780,
-        "wires": [
-            [
-                "265a202fcef60b44"
-            ]
         ]
     },
     {
@@ -5001,8 +4435,8 @@
             "4da3ba0ace62a98e"
         ],
         "uncaught": false,
-        "x": 270,
-        "y": 300,
+        "x": 230,
+        "y": 320,
         "wires": [
             [
                 "c5403bf55494f94b"
@@ -5108,11 +4542,296 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
-        "y": 400,
+        "x": 470,
+        "y": 360,
         "wires": [
             [
                 "0afb20ee3d565630"
+            ]
+        ]
+    },
+    {
+        "id": "9d999439c54af0da",
+        "type": "config",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "\"PID\" settings",
+        "properties": [
+            {
+                "p": "setpoint_CO2",
+                "pt": "flow",
+                "to": "1200",
+                "tot": "num"
+            },
+            {
+                "p": "min_CO2_on",
+                "pt": "flow",
+                "to": "5",
+                "tot": "num"
+            },
+            {
+                "p": "Kp",
+                "pt": "flow",
+                "to": ".01",
+                "tot": "num"
+            },
+            {
+                "p": "cum_error",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "p": "Ki",
+                "pt": "flow",
+                "to": ".004",
+                "tot": "str"
+            },
+            {
+                "p": "last_error",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "p": "Kd",
+                "pt": "flow",
+                "to": ".05",
+                "tot": "num"
+            }
+        ],
+        "active": true,
+        "x": 960,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "d23cb0ed0c018915",
+        "type": "inject",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "check CO2 level every 30 seconds",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 370,
+        "y": 900,
+        "wires": [
+            [
+                "2b15c635124ac3e4"
+            ]
+        ]
+    },
+    {
+        "id": "8115cdb33c2eb383",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "within time for CO2 to be on?",
+        "property": "CO2_ON",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 720,
+        "y": 960,
+        "wires": [
+            [
+                "8ea7ca419625113b"
+            ]
+        ]
+    },
+    {
+        "id": "09a1997cf283f87c",
+        "type": "rpi-gpio out",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "CO2 pin",
+        "pin": "11",
+        "set": true,
+        "level": "1",
+        "freq": "",
+        "out": "out",
+        "x": 1520,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "4a7db3adf19b8993",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "is sensor working?",
+        "property": "sensor_working",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 490,
+        "y": 960,
+        "wires": [
+            [
+                "8115cdb33c2eb383"
+            ]
+        ]
+    },
+    {
+        "id": "2b15c635124ac3e4",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "not in maintanence?",
+        "property": "maintanence",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 260,
+        "y": 960,
+        "wires": [
+            [
+                "4a7db3adf19b8993"
+            ]
+        ]
+    },
+    {
+        "id": "8ea7ca419625113b",
+        "type": "function",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "Set ms to turn CO2 solenoid on",
+        "func": "current_CO2 = global.get(\"CO2\");\nsetpoint_CO2 = flow.get(\"setpoint_CO2\");\n// Calculate the error term\nerror = setpoint_CO2 - current_CO2;\n// Calculate the Proportional Correction\nKp = flow.get(\"Kp\");\npCorrection = flow.get(\"min_CO2_on\")*Kp*error;\npCorrection = pCorrection - pCorrection % 1;\n// Calculate the Integral Correction\ncum_error = flow.get(\"cum_error\")+error;\nflow.set(\"cum_error\",cum_error);\niCorrection = (cum_error*flow.get(\"Ki\"));\niCorrection = iCorrection - iCorrection % 1;\n// Calculate the Derivative Correction\nlast_error = flow.get(\"last_error\");\nslope = error - last_error;\ndCorrection = slope*flow.get(\"Kd\");\ndCorrection = dCorrection - dCorrection % 1;\nflow.set(\"last_error\",error);\n// Calculate the # Seconds to turn CO2 on\nnum_CO2_seconds = pCorrection + iCorrection + dCorrection;\n// Clamp the Correction to not exceed a maximum \nmax_CO2_seconds = 20;\nmin_CO2_seconds = 0;\nif (num_CO2_seconds > max_CO2_seconds){\n    num_CO2_seconds = max_CO2_seconds;\n}else if (num_CO2_seconds < min_CO2_seconds) {\n    num_CO2_seconds = min_CO2_seconds;\n}\n    \n\nnode.warn(\"current CO2 = \" + current_CO2 + \" Error: = \"+ error);\nnode.warn(\"**>> pCorrection is \"+pCorrection+\" iCorrection is \"+iCorrection);\nnode.warn(\"******** dCorrection is \"+dCorrection);\nnode.warn(\"**** slope is \" + slope);\nnode.warn(\"**** Num CO2 seconds is \"+num_CO2_seconds);\nmsg.delay = num_CO2_seconds*1000 ;\nmsg.payload = msg.delay;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 960,
+        "wires": [
+            [
+                "0a3f95f85eb5341a"
+            ]
+        ],
+        "info": "# Why This code?\nBesides light and water, CO2 is a major input into the photosynthetic process.  I want to maintain a level of CO2 that will improve the photosynthetic process.  The CO2 I use resides in a cannister and is released by using a solenoid.  My original effort used a very simple ON when the measured CO2 was below a minimum then OFF when the CO2 reached above a maximum.  The amount of oscillation was significant.  So I learned about PID controllers.\n# What Hampered Learning About PID Controllers\nMy working conceptual model assumed PID controllers were only effective if the output was continous/analog.  I was thinking of PID controllers for cruise control or for temperature adjustment.  It completely alluded me that turning on and off a solenoid based on PID input could work...and then [a kind person on Reddit set me on a path to use PID control using a solenoid to control the output](https://www.reddit.com/r/Homebrewing/comments/q84l0a/diy_co2_flow_regulator_via_pid_not_sure_about/hgop0il/?context=3).\n\n## From regreddit\n\n_Hydroponic software controls developer here. You don't need to control flow from the Pi, you need to control the duty cycle of the solenoid. Set the flow rate to something fixed like 10 lpm, then control the solenoid based on the % error of your CO2 ppm setpoint. To do this, you have to also know the CO2 ppm of your grow room, and feed that data to the pi. From there, calculate how far off you are from the ppm setpoint. Let's used a simple example using round numbers: Your desired ppm is 1500. That's called your Setpoint (SP) Your current ppm is 1000. This is called your Process Value (PV). The difference between them is called your Process Error (PE) SP-PV=PE. Your PE is 500, and we want to get to 1500 without overshooting SP. To do that, let's choose a flow duty cycle of say 5 seconds, and a sample duty cycle of 60 seconds. Every 60 seconds, read the CO2, and calculate PE. Open the solenoid 5 x some % of PE. Let's call it 1% . So 1% of 500 is 5. So 5 (duty cycle) * 5 (PE) = 25. Open your solenoid for 25 seconds, then wait until your next cycle and do it again. Next time, your PE is only 300, so 3001%= 3. 35 =15 seconds. Next cycle, PE is 250, so 5*2.5 12.5, etc. As your PE drops, your P in the PID algorithm drops lower and lower. Your I in the PID loop is just the fixed duty cycle. You'll never open the solenoid for less than 5 secs, ensuring the you'll eventually hit your SP. You don't need D in this style of control.)_\n\n\n# Best Resource for Learning About PID Controllers"
+    },
+    {
+        "id": "5c0c596782767209",
+        "type": "trigger",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "Turn CO2 on/off",
+        "op1": "0",
+        "op2": "1",
+        "op1type": "num",
+        "op2type": "num",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": true,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1340,
+        "y": 940,
+        "wires": [
+            [
+                "09a1997cf283f87c",
+                "9db1913821a3e731"
+            ]
+        ]
+    },
+    {
+        "id": "9db1913821a3e731",
+        "type": "debug",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1510,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "0a3f95f85eb5341a",
+        "type": "switch",
+        "z": "4abea758808e56d0",
+        "g": "2aaa68f68d8fd77c",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1190,
+        "y": 960,
+        "wires": [
+            [
+                "5c0c596782767209"
+            ]
+        ]
+    },
+    {
+        "id": "163335db1cb8164e",
+        "type": "change",
+        "z": "7f5b70e481620d6e",
+        "name": "change temp from C to F",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "msg.payload.temperature*9/5 + 32 ",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "34247234f0668477"
             ]
         ]
     }
