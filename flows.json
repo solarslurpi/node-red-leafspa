@@ -102,7 +102,6 @@
         },
         "nodes": [
             "a73f97f6deb9c9dc",
-            "a78a3ea85ee5da0f",
             "2965aa8cc50c2bcd",
             "5bb9031a4d037509",
             "b01650a105e9d838",
@@ -117,12 +116,10 @@
             "ca2dd1046dede78b",
             "b58b16f52bf976ef",
             "44eb4d7df54d1880",
-            "75250e59829d03b9",
-            "1dacee984a866e2b",
             "68090ff36fa57771"
         ],
         "x": 54,
-        "y": 199,
+        "y": 599,
         "w": 1352,
         "h": 342
     },
@@ -240,8 +237,8 @@
             "53c4eac6e94ffc2d",
             "da0b31bae02beb36"
         ],
-        "x": 104,
-        "y": 799,
+        "x": 84,
+        "y": 1179,
         "w": 1192,
         "h": 242
     },
@@ -334,6 +331,71 @@
         "y": 819,
         "w": 1492,
         "h": 202
+    },
+    {
+        "id": "ead3b72aed6bc9be",
+        "type": "group",
+        "z": "d9bacc2cf62aebc4",
+        "name": "Catching an error",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "2bd6810d.e22ece",
+            "2c94a22c.91012e",
+            "d16b9fac.8212a",
+            "c5ee9670.5dbbd8"
+        ],
+        "x": 434,
+        "y": 59,
+        "w": 412,
+        "h": 142
+    },
+    {
+        "id": "332f52aa78d7450c",
+        "type": "group",
+        "z": "d9bacc2cf62aebc4",
+        "name": "Get stuff from influxdb",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "572302c4f0fcfe30",
+            "0298aa22669095f6",
+            "204d7762a3e566a7",
+            "f8ef8e48f8c91407"
+        ],
+        "x": 444,
+        "y": 259,
+        "w": 612,
+        "h": 142
+    },
+    {
+        "id": "2e3bec8a74e5db8b",
+        "type": "group",
+        "z": "8b70799ce97cf17d",
+        "name": "Get CO2 setpoint from influxdb",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "c7f72e4d26fb915d",
+            "22143188454846fc",
+            "fabce1651d31a7c1"
+        ],
+        "x": 64,
+        "y": 479,
+        "w": 842,
+        "h": 82
     },
     {
         "id": "bd52ceb7e193caff",
@@ -634,23 +696,12 @@
         "debounce": "25",
         "read": false,
         "x": 150,
-        "y": 320,
+        "y": 720,
         "wires": [
             [
                 "68090ff36fa57771"
             ]
         ]
-    },
-    {
-        "id": "a78a3ea85ee5da0f",
-        "type": "comment",
-        "z": "8b70799ce97cf17d",
-        "g": "ba872fe6adc0f262",
-        "name": "Use Photoresistor to see if LED lights on or off",
-        "info": "# Switch statement values\n0 = Lights are on.  1 = Lights are off.\n# When Lights turn on\nUse a delay to wait 30 minutes before supplementing CO2 and humidity. This delay is based on reading the plant does not use CO2 in the first 30 minutes.  I decided to start all supplemental environmental factors after 30 minutes based on the CO2 information.  At least it is a way to conserve on the amount of CO2 used.\n# When Lights turn off\nJust in case...\nTurn off the CO2 solenoid, humidifier, or pump in case they are on. None of these need to be on when the lights are off.\n# Send email\nSend an email to let me know when the lights are turned on or off.  The email gives me some piece of mind the system is working correctly.\n",
-        "x": 310,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "2965aa8cc50c2bcd",
@@ -665,7 +716,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 500,
+        "y": 900,
         "wires": [
             [
                 "b01650a105e9d838"
@@ -696,7 +747,7 @@
         "repair": false,
         "outputs": 2,
         "x": 580,
-        "y": 300,
+        "y": 700,
         "wires": [
             [
                 "2b135d6da4c867f9",
@@ -705,8 +756,7 @@
             [
                 "c9e4f1e57a4501c7",
                 "ca2dd1046dede78b",
-                "44eb4d7df54d1880",
-                "75250e59829d03b9"
+                "44eb4d7df54d1880"
             ]
         ]
     },
@@ -1308,7 +1358,7 @@
         "to": "",
         "reg": false,
         "x": 1070,
-        "y": 320,
+        "y": 720,
         "wires": [
             [
                 "6a8630aafdf67919"
@@ -1327,7 +1377,7 @@
         "freq": "",
         "out": "out",
         "x": 1220,
-        "y": 320,
+        "y": 720,
         "wires": []
     },
     {
@@ -1351,7 +1401,7 @@
         "to": "",
         "reg": false,
         "x": 1130,
-        "y": 360,
+        "y": 760,
         "wires": [
             [
                 "dcf288668f36caa1"
@@ -1370,7 +1420,7 @@
         "freq": "",
         "out": "out",
         "x": 1310,
-        "y": 360,
+        "y": 760,
         "wires": []
     },
     {
@@ -1394,7 +1444,7 @@
         "to": "",
         "reg": false,
         "x": 900,
-        "y": 400,
+        "y": 800,
         "wires": [
             [
                 "f7624c02411cec09"
@@ -1413,7 +1463,7 @@
         "freq": "",
         "out": "out",
         "x": 1100,
-        "y": 400,
+        "y": 800,
         "wires": []
     },
     {
@@ -1725,7 +1775,7 @@
         "drop": false,
         "allowrate": false,
         "x": 890,
-        "y": 280,
+        "y": 680,
         "wires": [
             [
                 "b58b16f52bf976ef"
@@ -1817,7 +1867,7 @@
         "to": "",
         "reg": false,
         "x": 930,
-        "y": 240,
+        "y": 640,
         "wires": [
             []
         ]
@@ -1843,7 +1893,7 @@
         "to": "",
         "reg": false,
         "x": 880,
-        "y": 320,
+        "y": 720,
         "wires": [
             [
                 "a112c1321f7394ca"
@@ -1871,7 +1921,7 @@
         "to": "",
         "reg": false,
         "x": 1120,
-        "y": 280,
+        "y": 680,
         "wires": [
             []
         ]
@@ -1897,7 +1947,7 @@
         "to": "",
         "reg": false,
         "x": 900,
-        "y": 360,
+        "y": 760,
         "wires": [
             [
                 "6c6ac30170b8c47d"
@@ -2274,8 +2324,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 640,
+        "x": 650,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -2301,8 +2351,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 460,
-        "y": 640,
+        "x": 340,
+        "y": 1040,
         "wires": [
             [
                 "2b80914edaddf792"
@@ -2616,49 +2666,6 @@
         ]
     },
     {
-        "id": "1dacee984a866e2b",
-        "type": "rpi-gpio out",
-        "z": "8b70799ce97cf17d",
-        "g": "ba872fe6adc0f262",
-        "name": "irrigation pump",
-        "pin": "22",
-        "set": "",
-        "level": "0",
-        "freq": "",
-        "out": "out",
-        "x": 1140,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "75250e59829d03b9",
-        "type": "change",
-        "z": "8b70799ce97cf17d",
-        "g": "ba872fe6adc0f262",
-        "name": "stop irrigation pump",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "0",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 910,
-        "y": 440,
-        "wires": [
-            [
-                "1dacee984a866e2b"
-            ]
-        ]
-    },
-    {
         "id": "68090ff36fa57771",
         "type": "switch",
         "z": "8b70799ce97cf17d",
@@ -2675,7 +2682,7 @@
         "repair": false,
         "outputs": 1,
         "x": 390,
-        "y": 320,
+        "y": 720,
         "wires": [
             [
                 "5bb9031a4d037509",
@@ -2709,8 +2716,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 760,
-        "y": 720,
+        "x": 640,
+        "y": 1120,
         "wires": [
             [
                 "5278d77885b0adfd"
@@ -2737,8 +2744,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 510,
-        "y": 720,
+        "x": 390,
+        "y": 1120,
         "wires": [
             [
                 "fefc9e29f4c30c81"
@@ -2757,8 +2764,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 990,
-        "y": 720,
+        "x": 870,
+        "y": 1120,
         "wires": []
     },
     {
@@ -2783,8 +2790,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 240,
-        "y": 860,
+        "x": 220,
+        "y": 1240,
         "wires": [
             [
                 "0816a5ae88264cbf"
@@ -2813,8 +2820,8 @@
         "topic": "",
         "payload": "false",
         "payloadType": "bool",
-        "x": 240,
-        "y": 940,
+        "x": 220,
+        "y": 1320,
         "wires": [
             [
                 "0816a5ae88264cbf"
@@ -2840,8 +2847,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 430,
-        "y": 900,
+        "x": 410,
+        "y": 1280,
         "wires": [
             [
                 "54fb67ba0ef3287b"
@@ -2878,8 +2885,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 650,
-        "y": 880,
+        "x": 630,
+        "y": 1260,
         "wires": [
             [
                 "e7eb39dee445d94c",
@@ -2916,8 +2923,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 860,
-        "y": 1000,
+        "x": 840,
+        "y": 1380,
         "wires": [
             [
                 "e65101b0861003d7"
@@ -2944,8 +2951,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
-        "y": 840,
+        "x": 910,
+        "y": 1220,
         "wires": [
             [
                 "917cb0c3bbbf7e80"
@@ -2963,8 +2970,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1190,
-        "y": 840,
+        "x": 1170,
+        "y": 1220,
         "wires": []
     },
     {
@@ -2987,8 +2994,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 880,
+        "x": 920,
+        "y": 1260,
         "wires": [
             [
                 "9e00cd6775f7eee4"
@@ -3006,8 +3013,8 @@
         "level": "1",
         "freq": "",
         "out": "out",
-        "x": 1200,
-        "y": 900,
+        "x": 1180,
+        "y": 1280,
         "wires": []
     },
     {
@@ -3027,8 +3034,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "allowrate": false,
-        "x": 890,
-        "y": 920,
+        "x": 870,
+        "y": 1300,
         "wires": [
             [
                 "f3424efddcaac61d"
@@ -3055,8 +3062,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1100,
-        "y": 960,
+        "x": 1080,
+        "y": 1340,
         "wires": [
             [
                 "e65101b0861003d7"
@@ -3076,8 +3083,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 1000,
+        "x": 1150,
+        "y": 1380,
         "wires": []
     },
     {
@@ -3143,8 +3150,8 @@
         "confignode": "01be24a515700cda",
         "name": "Node-Red access",
         "verbose": true,
-        "x": 670,
-        "y": 580,
+        "x": 550,
+        "y": 980,
         "wires": [
             []
         ]
@@ -3161,7 +3168,7 @@
         "name": "happyday.mjohnson@gmail.com",
         "dname": "send email LED ON/OFF change",
         "x": 860,
-        "y": 500,
+        "y": 900,
         "wires": []
     },
     {
@@ -3195,11 +3202,17 @@
                 "pt": "global",
                 "to": "true",
                 "tot": "bool"
+            },
+            {
+                "p": "growth_stage",
+                "pt": "flow",
+                "to": "flower",
+                "tot": "str"
             }
         ],
         "active": true,
-        "x": 240,
-        "y": 140,
+        "x": 180,
+        "y": 420,
         "wires": []
     },
     {
@@ -4389,8 +4402,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 570,
-        "y": 940,
+        "x": 550,
+        "y": 1320,
         "wires": [
             [
                 "da0b31bae02beb36"
@@ -4417,8 +4430,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 560,
-        "y": 1000,
+        "x": 540,
+        "y": 1380,
         "wires": [
             [
                 "95cd08fdc45a781f"
@@ -4447,13 +4460,14 @@
         "id": "2bd6810d.e22ece",
         "type": "catch",
         "z": "d9bacc2cf62aebc4",
+        "g": "ead3b72aed6bc9be",
         "name": "",
         "scope": [
             "2c94a22c.91012e"
         ],
         "uncaught": false,
-        "x": 530,
-        "y": 320,
+        "x": 570,
+        "y": 160,
         "wires": [
             [
                 "d16b9fac.8212a"
@@ -4464,6 +4478,7 @@
         "id": "2c94a22c.91012e",
         "type": "function",
         "z": "d9bacc2cf62aebc4",
+        "g": "ead3b72aed6bc9be",
         "name": "Throw Error",
         "func": "node.error(\"an example error\", msg);   ",
         "outputs": 1,
@@ -4471,8 +4486,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 710,
-        "y": 260,
+        "x": 750,
+        "y": 100,
         "wires": [
             []
         ]
@@ -4481,6 +4496,7 @@
         "id": "d16b9fac.8212a",
         "type": "debug",
         "z": "d9bacc2cf62aebc4",
+        "g": "ead3b72aed6bc9be",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -4490,14 +4506,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 320,
+        "x": 740,
+        "y": 160,
         "wires": []
     },
     {
         "id": "c5ee9670.5dbbd8",
         "type": "inject",
         "z": "d9bacc2cf62aebc4",
+        "g": "ead3b72aed6bc9be",
         "name": "Trigger error",
         "props": [
             {
@@ -4514,8 +4531,8 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 510,
-        "y": 260,
+        "x": 550,
+        "y": 100,
         "wires": [
             [
                 "2c94a22c.91012e"
@@ -4557,12 +4574,6 @@
         "g": "2aaa68f68d8fd77c",
         "name": "\"PID\" settings",
         "properties": [
-            {
-                "p": "setpoint_CO2",
-                "pt": "flow",
-                "to": "1200",
-                "tot": "num"
-            },
             {
                 "p": "min_CO2_on",
                 "pt": "flow",
@@ -4723,7 +4734,7 @@
         "z": "4abea758808e56d0",
         "g": "2aaa68f68d8fd77c",
         "name": "Set ms to turn CO2 solenoid on",
-        "func": "current_CO2 = global.get(\"CO2\");\nsetpoint_CO2 = flow.get(\"setpoint_CO2\");\n// Calculate the error term\nerror = setpoint_CO2 - current_CO2;\n// Calculate the Proportional Correction\nKp = flow.get(\"Kp\");\npCorrection = flow.get(\"min_CO2_on\")*Kp*error;\npCorrection = pCorrection - pCorrection % 1;\n// Calculate the Integral Correction\ncum_error = flow.get(\"cum_error\")+error;\nflow.set(\"cum_error\",cum_error);\niCorrection = (cum_error*flow.get(\"Ki\"));\niCorrection = iCorrection - iCorrection % 1;\n// Calculate the Derivative Correction\nlast_error = flow.get(\"last_error\");\nslope = error - last_error;\ndCorrection = slope*flow.get(\"Kd\");\ndCorrection = dCorrection - dCorrection % 1;\nflow.set(\"last_error\",error);\n// Calculate the # Seconds to turn CO2 on\nnum_CO2_seconds = pCorrection + iCorrection + dCorrection;\n// Clamp the Correction to not exceed a maximum \nmax_CO2_seconds = 20;\nmin_CO2_seconds = 0;\nif (num_CO2_seconds > max_CO2_seconds){\n    num_CO2_seconds = max_CO2_seconds;\n}else if (num_CO2_seconds < min_CO2_seconds) {\n    num_CO2_seconds = min_CO2_seconds;\n}\n    \n\nnode.warn(\"current CO2 = \" + current_CO2 + \" Error: = \"+ error);\nnode.warn(\"**>> pCorrection is \"+pCorrection+\" iCorrection is \"+iCorrection);\nnode.warn(\"******** dCorrection is \"+dCorrection);\nnode.warn(\"**** slope is \" + slope);\nnode.warn(\"**** Num CO2 seconds is \"+num_CO2_seconds);\nmsg.delay = num_CO2_seconds*1000 ;\nmsg.payload = msg.delay;\nreturn msg;",
+        "func": "current_CO2 = global.get(\"CO2\");\nsetpoint_CO2 = global.get(\"CO2_setpoint\");\nnode.warn(\"*** IN PID, CO2 setpoint is \"+ setpoint_CO2)\n// Calculate the error term\nerror = setpoint_CO2 - current_CO2;\n// Calculate the Proportional Correction\nKp = flow.get(\"Kp\");\npCorrection = flow.get(\"min_CO2_on\")*Kp*error;\npCorrection = pCorrection - pCorrection % 1;\n// Calculate the Integral Correction\ncum_error = flow.get(\"cum_error\")+error;\nflow.set(\"cum_error\",cum_error);\niCorrection = (cum_error*flow.get(\"Ki\"));\niCorrection = iCorrection - iCorrection % 1;\n// Calculate the Derivative Correction\nlast_error = flow.get(\"last_error\");\nslope = error - last_error;\ndCorrection = slope*flow.get(\"Kd\");\ndCorrection = dCorrection - dCorrection % 1;\nflow.set(\"last_error\",error);\n// Calculate the # Seconds to turn CO2 on\nnum_CO2_seconds = pCorrection + iCorrection + dCorrection;\n// Clamp the Correction to not exceed a maximum \nmax_CO2_seconds = 20;\nmin_CO2_seconds = 0;\nif (num_CO2_seconds > max_CO2_seconds){\n    num_CO2_seconds = max_CO2_seconds;\n}else if (num_CO2_seconds < min_CO2_seconds) {\n    num_CO2_seconds = min_CO2_seconds;\n}\n    \n\nnode.warn(\"current CO2 = \" + current_CO2 + \" Error: = \"+ error);\nnode.warn(\"**>> pCorrection is \"+pCorrection+\" iCorrection is \"+iCorrection);\nnode.warn(\"******** dCorrection is \"+dCorrection);\nnode.warn(\"**** slope is \" + slope);\nnode.warn(\"**** Num CO2 seconds is \"+num_CO2_seconds);\nmsg.delay = num_CO2_seconds*1000 ;\nmsg.payload = msg.delay;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4833,6 +4844,159 @@
             [
                 "34247234f0668477"
             ]
+        ]
+    },
+    {
+        "id": "572302c4f0fcfe30",
+        "type": "influxdb in",
+        "z": "d9bacc2cf62aebc4",
+        "g": "332f52aa78d7450c",
+        "influxdb": "bd52ceb7e193caff",
+        "name": "get CO2 setpoints",
+        "query": "select * from CO2_setpoints",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 730,
+        "y": 300,
+        "wires": [
+            [
+                "0298aa22669095f6",
+                "f8ef8e48f8c91407"
+            ]
+        ]
+    },
+    {
+        "id": "0298aa22669095f6",
+        "type": "debug",
+        "z": "d9bacc2cf62aebc4",
+        "g": "332f52aa78d7450c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "204d7762a3e566a7",
+        "type": "inject",
+        "z": "d9bacc2cf62aebc4",
+        "g": "332f52aa78d7450c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 300,
+        "wires": [
+            [
+                "572302c4f0fcfe30"
+            ]
+        ]
+    },
+    {
+        "id": "f8ef8e48f8c91407",
+        "type": "function",
+        "z": "d9bacc2cf62aebc4",
+        "g": "332f52aa78d7450c",
+        "name": "",
+        "func": "node.warn(\"Germination CO2 setpoint is \"+ msg.payload[0].germ)\nif (isNaN(msg.payload[0].germ))\n{\n    node.warn(\"GERMINATION DOES NOT NEED EXTRA CO2!@\")\n}\nnode.warn(\"Vegetative  CO2 setpoint is \"+ msg.payload[0].veg)\nnode.warn(\"Flower  CO2 setpoint is \"+ msg.payload[0].flower)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7f72e4d26fb915d",
+        "type": "influxdb in",
+        "z": "8b70799ce97cf17d",
+        "g": "2e3bec8a74e5db8b",
+        "influxdb": "bd52ceb7e193caff",
+        "name": "get CO2 setpoints",
+        "query": "select * from CO2_setpoints",
+        "rawOutput": false,
+        "precision": "",
+        "retentionPolicy": "",
+        "org": "organisation",
+        "x": 510,
+        "y": 520,
+        "wires": [
+            [
+                "fabce1651d31a7c1"
+            ]
+        ]
+    },
+    {
+        "id": "22143188454846fc",
+        "type": "inject",
+        "z": "8b70799ce97cf17d",
+        "g": "2e3bec8a74e5db8b",
+        "name": "read CO2 setpoints from influxdb",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 250,
+        "y": 520,
+        "wires": [
+            [
+                "c7f72e4d26fb915d"
+            ]
+        ]
+    },
+    {
+        "id": "fabce1651d31a7c1",
+        "type": "function",
+        "z": "8b70799ce97cf17d",
+        "g": "2e3bec8a74e5db8b",
+        "name": "Set the CO2_setpoint variable",
+        "func": "if (flow.get(\"growth_stage\")==\"flower\") {\n    global.set(\"CO2_setpoint\",msg.payload[0].flower)\n}else if (flow.get(\"growth_stage\") == \"veg\") {\n    global.set(\"CO2_setpoint\",msg.payload[0].veg)\n}else if (flow.get(\"growth_stage\") == \"germ\") {\n    global.set(\"CO2_setpoint\",msg.payload[0].germ)\n}\nnode.warn(\"CO2 setpoint is \" + global.get(\"CO2_setpoint\"))\nif (global.get(\"CO2_setpoint\") == \"None\"){\n    node.warn(\"NO CO2 ENRICHMENT\")\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 520,
+        "wires": [
+            []
         ]
     }
 ]
